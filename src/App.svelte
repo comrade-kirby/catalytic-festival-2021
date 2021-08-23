@@ -1,10 +1,21 @@
 <script>
+	import page from 'page'
+	
+	import Home from './Home/Home.svelte'
+	import Schedule from './Schedule/Schedule.svelte'
 	import Input from './Input/Input.svelte'
+
+	let component = Home
+	
+	page('', () => component = Home)
+	page('/schedule', () => component = Schedule)
+	page('*', () => component = Home)
+	page.start()
 </script>
 
 <main>
 	<div>
-		<p>hello world</p>
+		<svelte:component this={component} />
 		<Input />
 	</div>
 </main>
@@ -22,7 +33,7 @@
 		width: 100%;
 		content: "";
 		background-image: url('/images/plastic.jpg');
-		opacity: 0.5;
+		opacity: 0.3;
 		background-size: 200px;
 	}
 

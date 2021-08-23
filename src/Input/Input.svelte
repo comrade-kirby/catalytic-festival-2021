@@ -1,7 +1,27 @@
+<script>
+  import page from 'page'
+
+  let input
+
+  const submit = () => {
+    switch(input.toUpperCase()) {
+      case 'H' || 'HOME': 
+        page('/home')
+        break
+      case 'S' || 'SCHEDULE':
+        page('/schedule')
+        break
+    }
+
+    input = ''
+  }
+</script>
 
 <div>
   <p>$:</p>
-  <input type="text" autofocus>
+  <form on:submit|preventDefault={submit}>
+    <input type='text' autofocus bind:value={input}>
+  </form>
 </div>
 
 <style>
