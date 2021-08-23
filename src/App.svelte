@@ -1,30 +1,42 @@
 <script>
-	export let name;
+	import Input from './Input/Input.svelte'
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div>
+		<p>hello world</p>
+		<Input />
+	</div>
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		height: 100%;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	main::after {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: "";
+		background-image: url('/images/plastic.jpg');
+		opacity: 0.5;
+		background-size: 200px;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		max-width: 1100px;
+		flex: 1;
+		border: 7px solid var(--grey);
+		background-color: var(--dark-grey);
+		margin: 20px;
+		padding: 20px;
+		border-radius: 20px;
+		z-index: 1;
 	}
 </style>
