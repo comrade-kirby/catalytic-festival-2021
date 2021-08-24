@@ -14,40 +14,73 @@
 </script>
 
 <main>
-	<div>
-		<svelte:component this={component} />
-		<Input />
+	<div class='outer-border'>
+		<div class='inner-border'>
+			<svelte:component this={component} />
+			<Input />
+		</div>
 	</div>
 </main>
 
 <style>
 	main {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		height: 100%;
+		background-color: var(--olive);
 	}
 
-	main::after {
+	main::before {
 		position: absolute;
 		height: 100%;
 		width: 100%;
 		content: "";
 		background-image: url('/images/plastic.jpg');
-		opacity: 0.3;
-		background-size: 200px;
+		filter: contrast(500%);
+		opacity: 0.1;
+		background-size: 100px;
 	}
 
-	div {
+	.outer-border {
+		position: relative;
+		display: flex;
+		flex: 1;
+		padding: 30px 60px;
+		border-radius: 20px;
+		border-top: 15px solid var(--light-olive);
+		border-right: 15px solid var(--light-olive);
+		border-bottom: 15px solid var(--dark-olive);
+		border-left: 15px solid var(--dark-olive);
+	}
+
+	.inner-border {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		max-width: 1100px;
 		flex: 1;
-		border: 7px solid var(--grey);
+		border-top: 10px solid var(--dark-olive);
+		border-right: 10px solid var(--dark-olive);
+		border-bottom: 10px solid var(--light-olive);
+		border-left: 10px solid var(--light-olive);
+		box-shadow:  inset 0px 0px 20px -6px var(--dark-orange);
 		background-color: var(--dark-grey);
-		margin: 20px;
-		padding: 20px;
-		border-radius: 20px;
-		z-index: 1;
+		
+		padding: 30px;
+		border-radius: 70px;
+	}
+
+	.inner-border::after {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		content: "";
+		background-image: url('/images/lines.jpg');
+		filter: sepia(100%) saturate(700%) contrast(2500%);
+		opacity: 0.05;
+		background-size: 80px;
+		margin: -30px;
+		border-radius: 70px;
 	}
 </style>

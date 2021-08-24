@@ -1,4 +1,5 @@
-const typewriter = (node, { speed = 20 }) => {
+const typewriter = (node, { speed = 20, delay = 0 }) => {
+
   const valid = (
     node.childNodes.length === 1 &&
     node.childNodes[0].nodeType === Node.TEXT_NODE
@@ -13,11 +14,12 @@ const typewriter = (node, { speed = 20 }) => {
 
   return {
     duration,
+    delay,
     tick: t => {
       const i = ~~(text.length * t);
       node.textContent = text.slice(0, i);
     }
-  };
+  }
 }
 
 export default typewriter

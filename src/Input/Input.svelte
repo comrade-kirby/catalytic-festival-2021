@@ -5,10 +5,12 @@
 
   const submit = () => {
     switch(input.toUpperCase()) {
-      case 'H' || 'HOME': 
+      case 'H':
+      case 'HOME': 
         page('/home')
         break
-      case 'S' || 'SCHEDULE':
+      case 'S':
+      case 'SCHEDULE':
         page('/schedule')
         break
     }
@@ -29,6 +31,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    z-index: 1;
   }
 
   input {
