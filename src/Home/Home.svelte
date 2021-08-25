@@ -1,72 +1,46 @@
 <script>
 	import typewriter from '../typewriter'
+  import Button from '../shared_components/Button.svelte'
+  import { cataliticStreamingFestival } from '../ascii.js'
 </script>
 
 <div class='home'>
-  <h1 in:typewriter={{speed: 0.5}}> 
-╔═══╗      ╔╗      ╔╗       ╔╗           ╔═══╗              ╔╗     ╔═══╗         ╔╗            ╔╗ 
-║╔═╗║     ╔╝╚╗     ║║      ╔╝╚╗          ║╔═╗║              ║║     ║╔══╝        ╔╝╚╗           ║║ 
-║║ ╚╝╔══╗ ╚╗╔╝╔══╗ ║║ ╔╗ ╔╗╚╗╔╝╔╗╔══╗    ║╚══╗╔══╗╔╗╔╗╔═╗ ╔═╝║     ║╚══╗╔══╗╔══╗╚╗╔╝╔╗╔╗╔╗╔══╗ ║║ 
-║║ ╔╗╚ ╗║  ║║ ╚ ╗║ ║║ ║║ ║║ ║║ ╠╣║╔═╝    ╚══╗║║╔╗║║║║║║╔╗╗║╔╗║     ║╔══╝║╔╗║║══╣ ║║ ╠╣║╚╝║╚ ╗║ ║║ 
-║╚═╝║║╚╝╚╗ ║╚╗║╚╝╚╗║╚╗║╚═╝║ ║╚╗║║║╚═╗    ║╚═╝║║╚╝║║╚╝║║║║║║╚╝║    ╔╝╚╗  ║║═╣╠══║ ║╚╗║║╚╗╔╝║╚╝╚╗║╚╗
-╚═══╝╚═══╝ ╚═╝╚═══╝╚═╝╚═╗╔╝ ╚═╝╚╝╚══╝    ╚═══╝╚══╝╚══╝╚╝╚╝╚══╝    ╚══╝  ╚══╝╚══╝ ╚═╝╚╝ ╚╝ ╚═══╝╚═╝
-                      ╔═╝║                                                                        
-                      ╚══╝                                                  
-  </h1>
-  <h2 in:typewriter={{speed: 1, delay: 400}}>
-▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-██░▄▄▄░█▀▄▀█▄░▄█▀▄▄▀█░▄▄▀█░▄▄█░▄▄▀███░▄░█░▄▄░█░▄░█▀░█
-██░███░█░█▀██░██░██░█░▄▄▀█░▄▄█░▀▀▄████▀▄█░▀▄░██▀▄██░█
-██░▀▀▀░██▄███▄███▄▄██▄▄▄▄█▄▄▄█▄█▄▄███░▀▀█░▀▀░█░▀▀█▀░▀
-▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-  </h2>
+  <h1 in:typewriter={{speed: 0.5}}>{cataliticStreamingFestival}</h1>
+  <p in:typewriter={{speed: 15, delay: 400}}>October 2020</p>
   <div class='locations'>
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 700}}>[V]ienna</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 800}}>Oct 1-3 </p>
-      </div>
-    </button>
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 900}}>[R]otterndam</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 1000}}>Oct 8-10</p>
-      </div>
-    </button>
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 1100}}>[C]hicago</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 1200}}>Oct 14, 15-17</p>
-      </div>
-    </button> 
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 1300}}>[N]ew York</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 1400}}>Oct 23, 24</p>
-      </div>
-    </button>
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 1500}}>[T]rondheim</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 1600}}>Oct 30-31</p>
-      </div>
-    </button>
-    <button>
-      <p class='icon'>></p>
-      <div class='info'>
-        <p class='location' in:typewriter={{speed: 15, delay: 1700}}>[W]ashington D.C.</p>
-        <p class='date' in:typewriter={{speed: 15, delay: 1800}}>Oct 30-31</p>
-      </div>
-    </button>
+    <Button 
+      name='[V]ienna' 
+      subtext='Oct 1-3'
+      href='/vienna' 
+      delay={700} autofocus />
+    <Button 
+      name='[R]otterndam, Haarlem, Amsterdam' 
+      subtext='Oct 8-10' 
+      href='/rotterndam-haarlem-amsterdam'
+      delay={900} />
+    <Button 
+      name='[C]hicago' 
+      subtext='Oct 14, 15-17' 
+      href='/chicago'
+      delay={1100} />
+    <Button 
+      name='[N]ew York'
+       subtext='Oct 23, 24' 
+       href='/new-york'
+       delay={1300}  />
+    <Button 
+      name='[T]rondheim' 
+      subtext='Oct 30-31' 
+      href='/trondheim'
+      delay={1500} />
+    <Button 
+      name='[W]ashington D.C.' 
+      subtext='Oct 30-31' 
+      href='/washington-dc'
+      delay={1700} />
   </div>
 </div>
   
-
 <style>
   .home {
     display: flex;
@@ -74,63 +48,12 @@
     z-index: 1;
   }
 
-  h1 {
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    margin-bottom: 10px;
+  p {
+    margin-bottom: 40px;
   }
 
   .locations {
     display: flex;
     flex-direction: column;
   }
-
-  button {
-    display: flex;
-    flex-direction: row;
-    /* align-items: center; */
-    background-color: transparent;
-    border: none;
-    padding: 10px;
-    align-self: flex-start;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button:focus {
-    outline: none;
-  }
-  
-  button:hover .icon, button:focus .icon {
-    opacity: 1;
-  }
-
-  button:hover .location, button:focus .location {
-    background-color: var(--orange);
-    box-shadow: 0 0 4px var(--dark-orange);
-    color: var(--dark-grey);
-  }
-
-  .icon {
-    opacity: 0;
-    padding: 5px;
-    margin-right: 5px;
-  }
-
-  .location {
-    padding: 5px;
-  }
-
-  .date {
-    font-size: 12px;
-    margin-left: 10px;
-  }
-
-
 </style>

@@ -7,11 +7,31 @@
     switch(input.toUpperCase()) {
       case 'H':
       case 'HOME': 
-        page('/home')
+        page('/')
         break
-      case 'S':
-      case 'SCHEDULE':
-        page('/schedule')
+      case 'V':
+      case 'VIENNA':
+        page('/vienna')
+        break
+      case 'R':
+      case 'ROTTERNDAM':
+        page('/rotterndam-haarlem-amsterdam')
+        break
+      case 'C':
+      case 'CHICAGO':
+        page('/chicago')
+        break
+      case 'N':
+      case 'NEW YORK':
+        page('/new-york')
+        break
+      case 'T':
+      case 'TRONDHEIM':
+        page('/trondheim')
+        break
+      case 'W':
+      case 'WASHINGTON':
+        page('/washington-dc')
         break
     }
 
@@ -22,7 +42,7 @@
 <div>
   <p>$:</p>
   <form on:submit|preventDefault={submit}>
-    <input type='text' autofocus bind:value={input}>
+    <input type='text' class='focasable' autofocus bind:value={input}>
   </form>
 </div>
 

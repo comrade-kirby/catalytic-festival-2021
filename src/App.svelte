@@ -2,21 +2,55 @@
 	import page from 'page'
 	
 	import Home from './Home/Home.svelte'
-	import Schedule from './Schedule/Schedule.svelte'
+	import Location from './Location/Location.svelte'
+	// import Schedule from './Schedule/Schedule.svelte'
 	import Input from './Input/Input.svelte'
 
 	let component = Home
+	let cityKey
 	
 	page('', () => component = Home)
-	page('/schedule', () => component = Schedule)
+	page('/:city', ctx => {
+		component = Location
+		cityKey = ctx.params.city
+	})
 	page('*', () => component = Home)
 	page.start()
+
+	const moveFocus = e => {   
+
+		if ([38, 40].includes(e.keyCode)) {
+
+			const currentElement = document.activeElement			
+			const focusables = document.querySelectorAll(".focasable")
+			const length = focusables.length
+			let currentIndex
+
+			for (var i=0; i<focusables.length; i++) { 
+				if (focusables[i] == currentElement) { 
+					currentIndex = i
+					break;
+        }
+			}
+
+			if (e.keyCode == 40) {
+				currentIndex < length - 1 
+				? focusables[currentIndex + 1].focus() 
+				: focusables[0].focus(); 
+			} else if (e.keyCode == 38) {
+				currentIndex > 0 
+				? focusables[currentIndex - 1].focus() 
+				: focusables[length - 1].focus(); 
+			}
+		}
+	}
+
 </script>
 
-<main>
+<main on:keydown={moveFocus}>
 	<div class='outer-border'>
 		<div class='inner-border'>
-			<svelte:component this={component} />
+			<svelte:component this={component} {cityKey} />
 			<Input />
 		</div>
 	</div>
