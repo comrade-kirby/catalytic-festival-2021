@@ -4,8 +4,10 @@
   import typewriter from '../typewriter.js'
 
   export let name
-  export let subtext
+  export let subtext = false
+  export let external = false
   export let href
+  export let keyCode
   export let delay
   export let autofocus = false
   
@@ -25,24 +27,40 @@
   })
 </script>
 
-<button class='focasable' bind:this={element}
+{#if external}
+  <a class='focasable' id={keyCode} bind:this={element} {href} target="_blank"
+  on:mouseenter={setFocus} >
+    <p class='icon'>></p>
+    <div class='info'>
+      <p class='name' in:typewriter={{speed: 15, delay: delay}}>{name}</p>
+      {#if subtext}
+        <p class='subtext' in:typewriter={{speed: 15, delay: delay + 100}}>{subtext}</p>
+      {/if}
+    </div>
+  </a>
+{:else}
+  <button class='focasable' id={keyCode} bind:this={element}
   on:mouseenter={setFocus} 
   on:click={() => page(href)}>
-  <p class='icon'>></p>
-  <div class='info'>
-    <p class='location' in:typewriter={{speed: 15, delay: delay}}>{name}</p>
-    <p class='date' in:typewriter={{speed: 15, delay: delay + 100}}>{subtext}</p>
-  </div>
-</button>
+    <p class='icon'>></p>
+    <div class='info'>
+      <p class='name' in:typewriter={{speed: 15, delay: delay}}>{name}</p>
+      {#if subtext}
+        <p class='subtext' in:typewriter={{speed: 15, delay: delay + 100}}>{subtext}</p>
+      {/if}
+    </div>
+  </button>
+{/if}
 
 <style>
-  button {
+  button, a {
     display: flex;
     flex-direction: row;
     background-color: transparent;
     border: none;
     padding: 10px;
     align-self: flex-start;
+    text-decoration: none;
   }
 
   .info {
@@ -51,15 +69,15 @@
     align-items: flex-start;
   }
 
-  button:focus {
+  button:focus, a:focus {
     outline: none;
   }
   
-  button:focus .icon {
+  button:focus .icon, a:focus .icon {
     opacity: 1;
   }
 
-  button:focus .location {
+  button:focus .name, a:focus .name {
     background-color: var(--orange);
     box-shadow: 0 0 4px var(--dark-orange);
     color: var(--dark-grey);
@@ -71,12 +89,12 @@
     margin-right: 5px;
   }
 
-  .location {
+  .name {
     padding: 5px;
   }
 
-  .date {
+  .subtext {
     font-size: 12px;
-    margin-left: 10px;
+    margin-left: 50px;
   }
 </style>

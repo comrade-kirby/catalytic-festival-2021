@@ -3,8 +3,6 @@
 	
 	import Home from './Home/Home.svelte'
 	import Location from './Location/Location.svelte'
-	// import Schedule from './Schedule/Schedule.svelte'
-	import Input from './Input/Input.svelte'
 
 	let component = Home
 	let cityKey
@@ -42,6 +40,10 @@
 				? focusables[currentIndex - 1].focus() 
 				: focusables[length - 1].focus(); 
 			}
+		} else {
+			
+			let foundButton = document.getElementById(e.keyCode)
+			if (foundButton) { foundButton.focus() }
 		}
 	}
 
@@ -51,7 +53,6 @@
 	<div class='outer-border'>
 		<div class='inner-border'>
 			<svelte:component this={component} {cityKey} />
-			<Input />
 		</div>
 	</div>
 </main>
