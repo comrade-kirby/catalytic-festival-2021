@@ -3,6 +3,7 @@
 	
 	import Home from './Home/Home.svelte'
 	import Location from './Location/Location.svelte'
+	import Program from './Program/Program.svelte'
 
 	let component = Home
 	let cityKey
@@ -12,7 +13,10 @@
 		component = Location
 		cityKey = ctx.params.city
 	})
-	page('*', () => component = Home)
+	page('/:city/program', ctx => {
+		component = Program
+		cityKey = ctx.params.city
+	})
 	page.start()
 
 	const moveFocus = e => {   
