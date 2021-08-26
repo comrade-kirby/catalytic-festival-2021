@@ -1,8 +1,9 @@
 <script>
-  export let cityKey
+  import Typewriter from '../typewriter'
   import programs from '../programs.js'
   import { programTitle } from '../ascii.js'
-
+  
+  export let cityKey
   let programInfo 
 
   const setProgramInfo = (cityKey) => {
@@ -16,41 +17,56 @@
 </script>
 
 <div class='program'>
-  <h1>{programTitle}</h1>
+  <input class='hidden' autofocus >
+  <h1 in:Typewriter.type={{speed: 1}}>{programTitle}</h1>
 
   {#if programInfo}
     <div class='location'>
-      <p>{programInfo.location}</p>
-      <p class='small'>dates: {programInfo.date}</p>
+      <h2 in:Typewriter.type={{speed: 5}}>{programInfo.location}</h2>
+      <h3 in:Typewriter.type={{speed: 5}}>
+        {'dates: ' + programInfo.date}
+      </h3>
       {#if programInfo.venue}
-        <p class='small'>venue: {programInfo.venue}</p>
+        <h3 in:Typewriter.type={{speed: 5}}>
+          {'venue: ' + programInfo.venue}
+        </h3>
       {/if}
       {#if programInfo.audience}
-        <p class='small'>projected attendance: {programInfo.audience}</p>
+        <h3 in:Typewriter.type={{speed: 5}}>
+          {'projected attendance: ' + programInfo.audience}
+        </h3>
       {/if}
     </div>
     
     {#each programInfo.events as event}
       <div class='event'>
         {#if event.date}
-          <p>{event.date}</p>
+          <h2 in:Typewriter.type={{speed: 5}}>{event.date}</h2>
         {/if}
         {#if event.location}
-          <p class='small'>city: {event.location}</p>
+          <p in:Typewriter.type={{speed: 5}}>
+            {'city: ' + event.location}
+          </p>
         {/if}
         {#if event.venue}
-          <p class='small'>venue: {event.venue}</p>
+          <p in:Typewriter.type={{speed: 5}}>
+            {'venue: ' + event.venue}
+          </p>
         {/if}
         {#if event.address}
-          <p class='small'>address: {event.address}</p>
+          <p in:Typewriter.type={{speed: 5}}>
+            {'address: ' + event.address}
+          </p>
         {/if}
         {#if event.audience}
-          <p class='small'>projected attendance: {event.audience}</p>
+          <p in:Typewriter.type={{speed: 5}}>
+            {'projected attendance: ' + event.audience}
+          </p>
         {/if}
-        <p class='lineup-heading'>lineup:</p>
-        <div class='lineup'>
+        <h2 class='lineup-heading' in:Typewriter.type={{speed: 5}}>lineup:</h2>
+        <div class='lineup' >
           {#each event.performances as performance}
-            <p class='small'>- {performance}</p>
+            <h3 in:Typewriter.type={{speed: 5}}>{'- ' + performance}</h3>
           {/each}
         </div>
       </div>
@@ -59,28 +75,43 @@
 </div>
 
 <style>
+  .hidden {
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    position: absolute;
+  }
   .program {
     z-index: 1;
-  }
-
-  .location {
-    margin-bottom: 20px;
+		overflow: scroll;
   }
 
   .event {
-    margin-bottom: 20px;
+    margin-top: 40px;
     margin-left: 20px;
   }
 
-  .small {
-    font-size: 12px;
-  }
-
   .lineup-heading {
-    margin: 10px 0 0 20px;
+    margin-top: 10px;
+    margin-left: 20px;
   }
 
   .lineup {
     margin-left: 30px;
+  }
+
+  @media (max-width: 700px) {
+    .event {
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+
+    .lineup-heading {
+      margin-left: 10px;
+    }
+
+    .lineup {
+      margin-left: 15px;
+    }
   }
 </style>

@@ -1,49 +1,26 @@
 <script>
   import page from 'page'
 
-  let input
-
-  const submit = () => {
-    switch(input.toUpperCase()) {
-      case 'H':
-      case 'HOME': 
-        page('/')
-        break
-      case 'V':
-      case 'VIENNA':
-        page('/vienna')
-        break
-      case 'R':
-      case 'ROTTERNDAM':
-        page('/rotterndam-haarlem-amsterdam')
-        break
-      case 'C':
-      case 'CHICAGO':
-        page('/chicago')
-        break
-      case 'N':
-      case 'NEW YORK':
-        page('/new-york')
-        break
-      case 'T':
-      case 'TRONDHEIM':
-        page('/trondheim')
-        break
-      case 'W':
-      case 'WASHINGTON':
-        page('/washington-dc')
-        break
-    }
-
-    input = ''
+  const setFocus = e => {
+    e.target.focus()
   }
 </script>
 
 <div>
-  <p>$:</p>
-  <form on:submit|preventDefault={submit}>
-    <input type='text' class='focasable' autofocus bind:value={input}>
-  </form>
+  <h3>~ </h3>
+  <button id='72' 
+    on:mouseenter={setFocus}
+    on:click|preventDefault={() => page('/')}
+    >
+    <h3>[H] Home</h3>
+  </button>
+  <h3> | </h3>
+  <button id='66' 
+    on:mouseenter={setFocus} 
+    on:click|preventDefault={() => history.back()}>
+    <h3>[B] Back</h3>
+  </button>
+  <h3> ~</h3>
 </div>
 
 <style>
@@ -51,20 +28,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     z-index: 1;
   }
 
-  input {
-    flex: 1;
-    display: flex;
-    align-items: center;
+  button {
     background-color: transparent;
-    padding: 10px;
     border: none;
-    justify-self: flex-end;
+    padding: 5px;
+    margin: 0 10px;
+    text-decoration: none;
   }
-  
-  input:focus{
+
+  button:hover {
+    background-color: var(--orange);
+    box-shadow: 0 0 4px var(--dark-orange);
     outline: none;
+  }
+
+  button:hover h3 {
+    color: var(--dark-grey);
   }
 </style>

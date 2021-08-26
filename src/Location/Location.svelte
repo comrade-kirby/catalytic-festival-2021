@@ -1,5 +1,5 @@
 <script>
-	import typewriter from '../typewriter'
+	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
   import { cities } from '../ascii'
   export let cityKey
@@ -16,39 +16,45 @@
   $: setCityInfo(cityKey)
 </script>
 
-<div>
+<div class='location'>
   {#if cityInfo}
-    <h1 in:typewriter={{speed: 1}}>{cityInfo.name}</h1>
-    <p in:typewriter={{speed: 15, delay: 200}}>{cityInfo.date}</p>
+    <div class='heading'>
+      <h1 in:Typewriter.type={{speed: 1}}>{cityInfo.name}</h1>
+      <h2 in:Typewriter.type={{speed: 10}}>{cityInfo.country}</h2>
+    </div>
+    <h3 in:Typewriter.type={{speed: 10}}>{cityInfo.date}</h3>
     <div class='links'>
       <Button 
         name='[I] In-Person Tickets' 
         href='https://www.google.com' 
         keyCode='73' 
         external
-        delay={700} autofocus />
+        autofocus />
       <Button 
         name='[L] Live Stream Tickets' 
         href='/rotterndam-haarlem-amsterdam'
         keyCode='76' 
-        external
-        delay={900} />
+        external />
       <Button 
         name='[P] Program'
         href='/{cityKey}/program'
-        keyCode='80' 
-        delay={1100} />
+        keyCode='80' />
     </div>
   {/if}
 </div>
 
 <style>
-  div {
+  .location {
     z-index: 1;
+		overflow: scroll;
   }
 
-  p {
-    margin-bottom: 40px;
+  .heading {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  h3 {
+    margin-bottom: 20px;
   }
 
   .links {

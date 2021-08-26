@@ -12,8 +12,7 @@ html, body {
 	--dark-green: #65ff46;
 	--orange: #fcb750;
 	--dark-orange: #dc9730;
-
-	background-color: var(--light-grey);
+	overflow: hidden;
 }
 
 * {
@@ -23,18 +22,62 @@ html, body {
 	font-family: monospace;
 	color: var(--orange);
 	text-shadow: 0px 0px 8px var(--dark-orange);
+	font-weight: 500;
 }
 
 h1 {
 	font-size: 14px;
 	margin-bottom: 20px;
+	margin-right: 10px;
 	white-space: pre;
 }
 
-p {
-	font-size: 18px;
+h2 {
+	font-size: 20px;
 }
 
-input {
-	font-size: 18px;
+h3 {
+	font-size: 14px
+}
+
+p {
+	font-size: 10px
+}
+
+@media (max-width: 1100px) {
+	h1 {
+		font-size: 8px;
+		margin-bottom: 10px;
+	}
+
+	h2 {
+		font-size: 18px;
+	}
+	
+	h3 {
+		font-size: 12px
+	}
+	
+	p {
+		font-size: 10px
+	}
+}
+
+@media (max-width: 700px) {
+	h1 {
+		font-size: 5px;
+		margin-bottom: 10px;
+	}
+
+	h2 {
+		font-size: 14px;
+	}
+
+	h3 {
+		font-size: 11px
+	}
+	
+	p {
+		font-size: 9px
+	}
 }

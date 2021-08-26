@@ -1,14 +1,13 @@
 <script>
 	import page from 'page'
   import { onMount } from 'svelte';
-  import typewriter from '../typewriter.js'
+  import Typewriter from '../typewriter.js'
 
   export let name
   export let subtext = false
   export let external = false
   export let href
   export let keyCode
-  export let delay
   export let autofocus = false
   
   let element 
@@ -22,7 +21,7 @@
 
       setTimeout(() => {
         element.focus()
-      }, delay)
+      }, Typewriter.delay)
     }
   })
 </script>
@@ -30,11 +29,11 @@
 {#if external}
   <a class='focasable' id={keyCode} bind:this={element} {href} target="_blank"
   on:mouseenter={setFocus} >
-    <p class='icon'>></p>
+    <h2 class='icon'>></h2>
     <div class='info'>
-      <p class='name' in:typewriter={{speed: 15, delay: delay}}>{name}</p>
+      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
       {#if subtext}
-        <p class='subtext' in:typewriter={{speed: 15, delay: delay + 100}}>{subtext}</p>
+        <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
       {/if}
     </div>
   </a>
@@ -42,11 +41,11 @@
   <button class='focasable' id={keyCode} bind:this={element}
   on:mouseenter={setFocus} 
   on:click={() => page(href)}>
-    <p class='icon'>></p>
+    <h2 class='icon'>></h2>
     <div class='info'>
-      <p class='name' in:typewriter={{speed: 15, delay: delay}}>{name}</p>
+      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
       {#if subtext}
-        <p class='subtext' in:typewriter={{speed: 15, delay: delay + 100}}>{subtext}</p>
+        <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
       {/if}
     </div>
   </button>
@@ -94,7 +93,6 @@
   }
 
   .subtext {
-    font-size: 12px;
     margin-left: 50px;
   }
 </style>

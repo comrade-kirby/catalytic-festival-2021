@@ -1,49 +1,43 @@
 <script>
-	import typewriter from '../typewriter'
+	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
   import { cataliticStreamingFestival } from '../ascii.js'
 </script>
 
 <div class='home'>
-  <h1 in:typewriter={{speed: 0.5}}>{cataliticStreamingFestival}</h1>
-  <p in:typewriter={{speed: 15, delay: 400}}>October 2020</p>
+  <h1 in:Typewriter.type={{speed: 1}}>{cataliticStreamingFestival}</h1>
+  <h2 in:Typewriter.type={{speed: 10}}>October 2020</h2>
   <div class='locations'>
     <Button 
       name='[V] Vienna' 
       subtext='Oct 1-3'
       href='/vienna'
-      keyCode='86' 
-      delay={700} autofocus />
+      keyCode='86' autofocus />
     <Button 
       name='[R] Rotterndam, Haarlem, Amsterdam' 
       subtext='Oct 8-10' 
       href='/rotterndam-haarlem-amsterdam'
-      keyCode='82' 
-      delay={900} />
+      keyCode='82' />
     <Button 
       name='[C] Chicago' 
       subtext='Oct 14, 15-17' 
       href='/chicago'
-      keyCode='67' 
-      delay={1100} />
+      keyCode='67' />
     <Button 
       name='[N] New York'
        subtext='Oct 23, 24' 
        href='/new-york'
-       keyCode='78' 
-       delay={1300}  />
+       keyCode='78'   />
     <Button 
       name='[T] Trondheim' 
       subtext='Oct 30-31' 
       href='/trondheim'
-      keyCode='84' 
-      delay={1500} />
+      keyCode='84' />
     <Button 
       name='[W] Washington D.C.' 
       subtext='Oct 30-31' 
       href='/washington-dc'
-      keyCode='87' 
-      delay={1700} />
+      keyCode='87' />
   </div>
 </div>
   
@@ -51,11 +45,12 @@
   .home {
     display: flex;
     flex-direction: column;
+		overflow: scroll;
     z-index: 1;
   }
 
-  p {
-    margin-bottom: 40px;
+  h2 {
+    margin-bottom: 20px;
   }
 
   .locations {
