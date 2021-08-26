@@ -98,7 +98,7 @@
 		width: 100%;
 		content: "";
 		background-image: url('/images/lines.jpg');
-		filter: sepia(100%) saturate(700%) contrast(2500%);
+		filter: sepia(100%) saturate(700%) contrast(2500%) hue-rotate(-50deg);
 		opacity: 0.05;
 		background-size: 80px;
 		border-radius: 70px;
@@ -106,14 +106,17 @@
 
 	.content {
 		z-index: 1;
-		padding: 30px 30px 5px;
+		padding: 60px 60px 15px;
 		overflow-y: scroll;
 	}
 
 	@media (max-width: 1100px) {
 		.outer-border {
 			padding: 30px 60px;
+		}
 
+		.content {
+			padding: 30px 30px 5px;
 		}
 	}
 

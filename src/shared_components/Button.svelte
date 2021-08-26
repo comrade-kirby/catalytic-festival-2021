@@ -95,4 +95,10 @@
   .subtext {
     margin-left: 50px;
   }
+
+  @media (max-width: 1100px) {
+    button, a {
+      margin-left: -15px
+    }
+  }
 </style>

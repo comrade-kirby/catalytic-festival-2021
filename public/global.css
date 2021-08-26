@@ -12,6 +12,8 @@ html, body {
 	--dark-green: #65ff46;
 	--orange: #fcb750;
 	--dark-orange: #dc9730;
+	--orange: hsl(10, 100%, 72%);
+	--dark-orange: hsl(14, 62%, 50%);
 	overflow: hidden;
 }
 
