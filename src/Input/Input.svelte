@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
+    padding-bottom: 30px;
   }
 
   button {
@@ -48,5 +49,11 @@
 
   button:hover h3 {
     color: var(--dark-grey);
+  }
+
+  @media (max-width: 700px) {
+    div {
+      padding-bottom: 15px;
+    }
   }
 </style>

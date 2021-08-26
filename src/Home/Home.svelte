@@ -45,8 +45,6 @@
   .home {
     display: flex;
     flex-direction: column;
-		overflow: scroll;
-    z-index: 1;
   }
 
   h2 {

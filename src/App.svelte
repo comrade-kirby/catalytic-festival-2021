@@ -37,7 +37,9 @@
 <main on:keydown={keydown}>
 	<div class='outer-border'>
 		<div class='inner-border'>
-			<svelte:component this={component} {cityKey} />
+			<div class='content'>
+				<svelte:component this={component} {cityKey} />
+			</div>
 			<Input />
 		</div>
 	</div>
@@ -67,7 +69,7 @@
 		position: relative;
 		display: flex;
 		flex: 1;
-		padding: 30px 60px;
+		padding: 30px 100px;
 		border-radius: 20px;
 		border-top: 15px solid var(--light-olive);
 		border-right: 15px solid var(--light-olive);
@@ -87,7 +89,6 @@
 		border-left: 10px solid var(--light-olive);
 		box-shadow:  inset 0px 0px 20px -6px var(--dark-orange);
 		background-color: var(--dark-grey);
-		padding: 30px;
 		border-radius: 70px;
 	}
 
@@ -100,11 +101,29 @@
 		filter: sepia(100%) saturate(700%) contrast(2500%);
 		opacity: 0.05;
 		background-size: 80px;
-		margin: -30px;
 		border-radius: 70px;
 	}
 
-	@media (max-width: 700px) {
+	.content {
+		z-index: 1;
+		padding: 30px 30px 5px;
+		overflow-y: scroll;
+	}
+
+	@media (max-width: 1100px) {
+		.outer-border {
+			padding: 30px 60px;
+
+		}
+	}
+
+	@media (max-width: 800px) {
+		.outer-border {
+			padding: 30px 30px;
+		}
+	}
+
+	@media (max-width: 500px) {
 		.outer-border {
 			padding: 10px;
 			border-top: 5px solid var(--light-olive);
@@ -114,18 +133,19 @@
 		}
 
 		.inner-border {
-			padding: 15px;
 			border-top: 5px solid var(--dark-olive);
 			border-right: 5px solid var(--dark-olive);
 			border-bottom: 5px solid var(--light-olive);
 			border-left: 5px solid var(--light-olive);
 			border-radius: 40px;
-
 		}
 
 		.inner-border::after {
-			margin: -20px;
 			border-radius: 40px;
+		}
+
+		.content {
+			padding: 15px 15px 5px;
 		}
 	}
 </style>

@@ -16,7 +16,7 @@
   $: setProgramInfo(cityKey)
 </script>
 
-<div class='program'>
+<div>
   <input class='hidden' autofocus >
   <h1 in:Typewriter.type={{speed: 1}}>{programTitle}</h1>
 
@@ -80,10 +80,6 @@
     max-width: 0;
     opacity: 0;
     position: absolute;
-  }
-  .program {
-    z-index: 1;
-		overflow: scroll;
   }
 
   .event {

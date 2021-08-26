@@ -16,7 +16,7 @@
   $: setCityInfo(cityKey)
 </script>
 
-<div class='location'>
+<div>
   {#if cityInfo}
     <div class='heading'>
       <h1 in:Typewriter.type={{speed: 1}}>{cityInfo.name}</h1>
@@ -44,11 +44,6 @@
 </div>
 
 <style>
-  .location {
-    z-index: 1;
-		overflow: scroll;
-  }
-
   .heading {
     display: flex;
     flex-wrap: wrap;
