@@ -6,7 +6,7 @@
 
 <div class='home'>
   <h1 in:Typewriter.type={{speed: 1}}>{cataliticStreamingFestival}</h1>
-  <h2 in:Typewriter.type={{speed: 10}}>October 2020</h2>
+  <h2 in:Typewriter.type={{speed: 10}}>October 2021</h2>
   <div class='locations'>
     <Button 
       name='[V] Vienna' 
