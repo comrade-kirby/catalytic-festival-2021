@@ -11,7 +11,6 @@
   export let autofocus = false
   
   let element 
-
   const setFocus = e => {
     e.target.focus()
   }
@@ -27,11 +26,14 @@
 </script>
 
 {#if external}
-  <a class='focasable' id={keyCode} bind:this={element} {href} target="_blank"
+  <a class='focasable' id={keyCode} 
+  bind:this={element} {href} 
+  target="_blank"
   on:mouseenter={setFocus} >
-    <h2 class='icon'>></h2>
+    <h2 class='selected icon'>-></h2>
+    <h2 in:Typewriter.type={{speed: 5}} class='unselected icon'>-</h2>
     <div class='info'>
-      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
+      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name + ' >'}</h2>
       {#if subtext}
         <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
       {/if}
@@ -41,7 +43,8 @@
   <button class='focasable' id={keyCode} bind:this={element}
   on:mouseenter={setFocus} 
   on:click={() => page(href)}>
-    <h2 class='icon'>></h2>
+    <h2 class='selected icon'>-></h2>
+    <h2 in:Typewriter.type={{speed: 5}} class='unselected icon'>-</h2>
     <div class='info'>
       <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
       {#if subtext}
@@ -72,20 +75,26 @@
     outline: none;
   }
   
-  button:focus .icon, a:focus .icon {
-    opacity: 1;
+  .icon {
+    padding: 5px;
+    margin-right: 5px;
+  }
+  
+  .selected {
+    display: none;
+  }
+
+  button:focus .selected, a:focus .selected {
+    display: unset;
+  }
+  button:focus .unselected, a:focus .unselected {
+    display: none;
   }
 
   button:focus .name, a:focus .name {
     background-color: var(--orange);
     box-shadow: 0 0 4px var(--dark-orange);
     color: var(--dark-grey);
-  }
-
-  .icon {
-    opacity: 0;
-    padding: 5px;
-    margin-right: 5px;
   }
 
   .name {
