@@ -1,11 +1,15 @@
 <script>
 	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
-  import { cataliticStreamingFestival } from '../ascii.js'
+  import { homeHeadings } from '../ascii.js'
 </script>
 
 <div class='home'>
-  <h1 in:Typewriter.type={{speed: 1}}>{cataliticStreamingFestival}</h1>
+  <div class='home-headings'>
+    {#each homeHeadings as heading}
+    <h1 in:Typewriter.type={{speed: 1}}>{heading}</h1>
+    {/each}
+  </div>
   <h2 in:Typewriter.type={{speed: 10}}>October 2021</h2>
   <div class='locations'>
     <Button 
@@ -45,6 +49,11 @@
   .home {
     display: flex;
     flex-direction: column;
+  }
+
+  .home-headings {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   h2 {
