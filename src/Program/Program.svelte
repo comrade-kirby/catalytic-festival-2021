@@ -17,7 +17,7 @@
 </script>
 
 <div>
-  <input class='hidden' autofocus >
+  <input type='button' class='hidden' autofocus >
   <h1 in:Typewriter.type={{speed: 1}}>{programTitle}</h1>
 
   {#if programInfo}
