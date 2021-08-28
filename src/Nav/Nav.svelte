@@ -26,7 +26,7 @@
   <button id='83' class='stream' 
     on:click|preventDefault={() => page('/stream')}>
     <svg>
-      <polygon points="60,0 {w},0 {w},{h} 0,{h}" />
+      <polygon points="{h/2},0 {w},0 {w},{h} 0,{h}" />
     </svg>
     <h2>[S] Stream</h2>
   </button>
@@ -99,5 +99,15 @@
   
   .stream:hover svg, .stream:focus svg{
     fill: var(--orange);
+  }
+
+  @media (max-width: 500px) {
+
+    .stream {
+      position: relative;
+      padding: 15px 15px 15px 30px;
+      flex-grow: 1;
+      margin: 0;
+    }
   }
 </style>
