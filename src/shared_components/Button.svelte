@@ -26,7 +26,7 @@
 </script>
 
 {#if external}
-  <a class='focasable' id={keyCode} 
+  <a class='focusable' id={keyCode} 
   bind:this={element} {href} 
   target="_blank"
   on:mouseenter={setFocus} >
@@ -40,7 +40,7 @@
     </div>
   </a>
 {:else}
-  <button class='focasable' id={keyCode} bind:this={element}
+  <button class='focusable' id={keyCode} bind:this={element}
   on:mouseenter={setFocus} 
   on:click={() => page(href)}>
     <h2 class='selected icon'>-></h2>

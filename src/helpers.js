@@ -3,7 +3,7 @@ export const moveFocus = e => {
   if ([38, 40].includes(e.keyCode)) {
 
     const currentElement = document.activeElement	
-    const focusables = document.querySelectorAll(".focasable")
+    const focusables = document.querySelectorAll(".focusable")
     const length = focusables.length
     let currentIndex
 

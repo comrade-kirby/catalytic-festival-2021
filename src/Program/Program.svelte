@@ -1,4 +1,6 @@
 <script>
+  import Link from '../shared_components/Link.svelte'
+  import Event from './Event/Event.svelte'
   import Typewriter from '../typewriter'
   import programs from '../programs.js'
   import { programTitle } from '../ascii.js'
@@ -27,9 +29,15 @@
         {'dates: ' + programInfo.date}
       </h3>
       {#if programInfo.venue}
-        <h3 in:Typewriter.type={{speed: 5}}>
-          {'venue: ' + programInfo.venue}
-        </h3>
+        {#if programInfo.venue.link}
+          <h3>
+            <Link href={programInfo.venue.link} text={programInfo.venue.name}/>
+          </h3>
+        {:else}
+          <h3 in:Typewriter.type={{speed: 5}}>
+            {'venue: ' + programInfo.venue.name}
+          </h3>
+        {/if}
       {/if}
       {#if programInfo.audience}
         <h3 in:Typewriter.type={{speed: 5}}>
@@ -39,37 +47,7 @@
     </div>
     
     {#each programInfo.events as event}
-      <div class='event'>
-        {#if event.date}
-          <h2 in:Typewriter.type={{speed: 5}}>{event.date}</h2>
-        {/if}
-        {#if event.location}
-          <p in:Typewriter.type={{speed: 5}}>
-            {'city: ' + event.location}
-          </p>
-        {/if}
-        {#if event.venue}
-          <p in:Typewriter.type={{speed: 5}}>
-            {'venue: ' + event.venue}
-          </p>
-        {/if}
-        {#if event.address}
-          <p in:Typewriter.type={{speed: 5}}>
-            {'address: ' + event.address}
-          </p>
-        {/if}
-        {#if event.audience}
-          <p in:Typewriter.type={{speed: 5}}>
-            {'projected attendance: ' + event.audience}
-          </p>
-        {/if}
-        <h2 class='lineup-heading' in:Typewriter.type={{speed: 5}}>lineup:</h2>
-        <div class='lineup' >
-          {#each event.performances as performance}
-            <h3 in:Typewriter.type={{speed: 5}}>{'- ' + performance}</h3>
-          {/each}
-        </div>
-      </div>
+      <Event {event} />
     {/each}
   {/if}
 </div>
@@ -80,34 +58,5 @@
     max-width: 0;
     opacity: 0;
     position: absolute;
-  }
-
-  .event {
-    margin-top: 40px;
-    margin-left: 20px;
-  }
-
-  .lineup-heading {
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-
-  .lineup {
-    margin-left: 30px;
-  }
-
-  @media (max-width: 700px) {
-    .event {
-      margin-top: 20px;
-      margin-left: 10px;
-    }
-
-    .lineup-heading {
-      margin-left: 10px;
-    }
-
-    .lineup {
-      margin-left: 15px;
-    }
   }
 </style>

@@ -1,6 +1,10 @@
 const programs = {
   'vienna': {
     location: 'Vienna, Austria',
+    venue: { 
+      name: 'Porgy & Bess', 
+      link: 'https://www.porgy.at/'
+    },
     date: 'October 1-3',
     events: []
   },
@@ -11,7 +15,7 @@ const programs = {
       {
         location: 'Rotterndam',
         date: 'Friday October 8, 2021',
-        venue: 'Worm',
+        venue: { name: 'Worm' },
         address: 'Boomgaardsstraat 71, Rotterdam, NL',
         audience: 40,
         performances: [
@@ -25,7 +29,7 @@ const programs = {
       {
         location: 'Haarlem',
         date: 'Saturday October 9, 2021',
-        venue: 'Pletterij',
+        venue: { name: 'Pletterij' },
         performances: [
           'Ab & Ig & George & Pau',
           'Terrie & Andy & Jaap& Genevieve',
@@ -35,7 +39,7 @@ const programs = {
       {
         location: 'Amsterdam',
         date: 'Sunday October 10, 2021',
-        venue: 'Bimhuis',
+        venue: { name: 'Bimhuis' },
         performances: [
           'Ab & Isabelle & Terrie & Hanne',
           'Andy en Genevieve',
@@ -48,7 +52,10 @@ const programs = {
   'chicago': {
     location: 'Chicago, USA',
     date: 'October 14, 16-17',
-    venue: 'Elastic Arts',
+    venue: { 
+      name: 'Elastic Arts',
+      link: 'https://elasticarts.org'
+     },
     events: [
       {
         date: 'Thursday October 14, 2021',
@@ -79,7 +86,10 @@ const programs = {
   'new-york': {
     location: 'New York, USA',
     date: 'October 23, 24',
-    venue: 'Fridman Gallery',
+    venue: { 
+      name: 'Fridman Gallery',
+      link: 'https://www.fridmanlive.com' 
+    },
     audience: 120,
     events: [
       {
@@ -99,7 +109,7 @@ const programs = {
   'trondheim': {
     location: 'Trondheim, Norway',
     date: 'October 30, 31',
-    venue: 'Stillverk1',
+    venue: { name: 'Stillverk1' },
     audience: 60,
     events: [
       {
@@ -129,7 +139,10 @@ const programs = {
   'washington-dc': {
     location: 'Washington, D.C., USA',
     date: 'October 30, 31',
-    venue: 'Rhizome',
+    venue: { 
+      name: 'Rhizome',
+      link: 'https://www.rhizomedc.org'
+    },
     audience: 150,
     events: [
       {
