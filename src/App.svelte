@@ -3,7 +3,8 @@
 	
 	import Screen from './Screen/Screen.svelte'
 	import Home from './Home/Home.svelte'
-	import Input from './Input/Input.svelte'
+	import Stream from './Stream/Stream.svelte'
+	import Nav from './Nav/Nav.svelte'
 	import Location from './Location/Location.svelte'
 	import Program from './Program/Program.svelte'
 	import { moveFocus, navigate } from './helpers.js'
@@ -13,6 +14,7 @@
 	let cityKey
 	
 	page('', () => component = Home)
+	page('/stream', () => component = Stream)
 	page('/:city', ctx => {
 		component = Location
 		cityKey = ctx.params.city
@@ -40,7 +42,7 @@
 		<div class='content'>
 			<svelte:component this={component} {cityKey} />
 		</div>
-		<Input />
+		<Nav />
 	</Screen>
 </main>
 

@@ -35,5 +35,7 @@ export const navigate = (e, page) => {
     page('/')
   } else if (e.keyCode == 66) {
     history.back()
+  } else if (e.keyCode == 83) {
+    page('/stream')
   }
 }

@@ -51,12 +51,3 @@
     {/each}
   {/if}
 </div>
-
-<style>
-  .hidden {
-    max-height: 0;
-    max-width: 0;
-    opacity: 0;
-    position: absolute;
-  }
-</style>

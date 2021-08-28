@@ -63,6 +63,7 @@
     padding: 10px;
     align-self: flex-start;
     text-decoration: none;
+    cursor: pointer;
   }
 
   .info {

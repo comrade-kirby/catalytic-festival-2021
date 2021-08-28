@@ -34,6 +34,7 @@
 		box-shadow:  inset 0px 0px 20px -6px var(--dark-orange);
 		background-color: var(--dark-grey);
 		border-radius: 70px;
+		overflow: hidden;
 	}
 
 	.screen::after {
