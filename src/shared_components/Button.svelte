@@ -1,7 +1,6 @@
 <script>
 	import page from 'page'
   import { onMount } from 'svelte';
-  import Typewriter from '../typewriter.js'
 
   export let name
   export let subtext = false
@@ -18,9 +17,7 @@
   onMount(() => {
     if (autofocus) {
 
-      setTimeout(() => {
-        element.focus()
-      }, Typewriter.delay)
+      element.focus()
     }
   })
 </script>
@@ -33,9 +30,9 @@
     <svg class='selected' viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="50"></circle>
     </svg>
-    <h2 class='name' in:Typewriter.type={{speed: 5}}>{name + ' >'}</h2>
+    <h2 class='name'>{name + ' >'}</h2>
     {#if subtext}
-      <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
+      <p class='subtext'>{subtext}</p>
     {/if}
   </a>
 {:else}
@@ -45,9 +42,9 @@
     <svg class='selected' viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="50"></circle>
     </svg>
-    <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
+    <h2 class='name'>{name}</h2>
     {#if subtext}
-      <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
+      <p class='subtext'>{subtext}</p>
     {/if}
   </button>
 {/if}

@@ -1,15 +1,14 @@
 <script>
   import Link from '../../shared_components/Link.svelte'
-  import Typewriter from '../../typewriter.js'
   export let event
 </script>
 
 <div class='event'>
   {#if event.date}
-    <h2 in:Typewriter.type={{speed: 5}}>{event.date}</h2>
+    <h2>{event.date}</h2>
   {/if}
   {#if event.location}
-    <p in:Typewriter.type={{speed: 5}}>
+    <p>
       {'city: ' + event.location}
     </p>
   {/if}
@@ -19,20 +18,20 @@
         <Link href={event.venue.link} text={event.venue.name} />
       </p>
     {:else}
-      <p in:Typewriter.type={{speed: 5}}>
+      <p>
         {'venue: ' + event.venue.name}
       </p>
     {/if}
   {/if}
   {#if event.audience}
-    <p in:Typewriter.type={{speed: 5}}>
+    <p>
       {'projected attendance: ' + event.audience}
     </p>
   {/if}
-  <h2 class='lineup-heading' in:Typewriter.type={{speed: 5}}>lineup:</h2>
+  <h2 class='lineup-heading'>lineup:</h2>
   <div class='lineup' >
     {#each event.performances as performance}
-      <h3 in:Typewriter.type={{speed: 5}}>{'- ' + performance}</h3>
+      <h3>{'- ' + performance}</h3>
     {/each}
   </div>
 </div>

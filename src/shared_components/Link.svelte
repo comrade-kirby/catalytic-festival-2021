@@ -1,5 +1,4 @@
 <script>
-  import Typewriter from '../typewriter.js'
   export let href
   export let text
 
@@ -9,10 +8,9 @@
 
 </script>
 
-<p in:Typewriter.type={{speed: 5}}>event: </p>
+<p>event: </p>
 <a {href} class='focusable' target='_blank' 
-  in:Typewriter.type={{speed: 5}}
-  on:mouseenter={setFocus}>
+  on:mouseenter={setFocus}> 
   {text}
 </a>
 

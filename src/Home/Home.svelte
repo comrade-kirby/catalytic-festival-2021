@@ -1,13 +1,12 @@
 <script>
-	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
 </script>
 
 <div class='home'>
   <div class='home-headings'>
-    <h1 in:Typewriter.type={{speed: 1}}>Catalytic Sound Festival</h1>
+    <h1>Catalytic Sound Festival</h1>
   </div>
-  <h2 in:Typewriter.type={{speed: 10}}>October 2021</h2>
+  <h2>October 2021</h2>
   <div class='locations'>
     <Button 
       name='vienna' 

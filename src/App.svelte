@@ -8,7 +8,6 @@
 	import Location from './Location/Location.svelte'
 	import Program from './Program/Program.svelte'
 	import { moveFocus, navigate } from './helpers.js'
-	import Typewriter from './typewriter';
 
 	let component = Home
 	let cityKey
@@ -26,7 +25,6 @@
 	page.start()
 	page.exit('*', (ctx, next) => {
   	window.scroll(0, 0)
-		Typewriter.delay = 0
  	 	next()
 	})
 

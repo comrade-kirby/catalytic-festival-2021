@@ -1,5 +1,4 @@
 <script>
-	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
   import { cities } from '../ascii'
   export let cityKey
@@ -19,10 +18,10 @@
 <div>
   {#if cityInfo}
     <div class='heading'>
-      <h1 in:Typewriter.type={{speed: 10}}>{cityInfo.name}</h1>
-      <h2 in:Typewriter.type={{speed: 10}}>{cityInfo.country}</h2>
+      <h1>{cityInfo.name}</h1>
+      <h2>{cityInfo.country}</h2>
     </div>
-    <h3 in:Typewriter.type={{speed: 10}}>{cityInfo.date}</h3>
+    <h3>{cityInfo.date}</h3>
     <div class='links'>
       <Button 
         name='in-person tickets' 

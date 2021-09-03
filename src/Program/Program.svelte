@@ -1,9 +1,7 @@
 <script>
   import Link from '../shared_components/Link.svelte'
   import Event from './Event/Event.svelte'
-  import Typewriter from '../typewriter'
   import programs from '../programs.js'
-  import { programTitle } from '../ascii.js'
   
   export let cityKey
   let programInfo 
@@ -20,12 +18,12 @@
 
 <div>
   <input type='button' class='hidden' autofocus >
-  <h1 in:Typewriter.type={{speed: 5}}>Program</h1>
+  <h1>Program</h1>
 
   {#if programInfo}
     <div class='location'>
-      <h2 in:Typewriter.type={{speed: 5}}>{programInfo.location}</h2>
-      <h3 in:Typewriter.type={{speed: 5}}>
+      <h2>{programInfo.location}</h2>
+      <h3>
         {'dates: ' + programInfo.date}
       </h3>
       {#if programInfo.venue}
@@ -34,13 +32,13 @@
             <Link href={programInfo.venue.link} text={programInfo.venue.name}/>
           </h3>
         {:else}
-          <h3 in:Typewriter.type={{speed: 5}}>
+          <h3>
             {'venue: ' + programInfo.venue.name}
           </h3>
         {/if}
       {/if}
       {#if programInfo.audience}
-        <h3 in:Typewriter.type={{speed: 5}}>
+        <h3>
           {'projected attendance: ' + programInfo.audience}
         </h3>
       {/if}
