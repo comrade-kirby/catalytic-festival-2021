@@ -51,7 +51,7 @@ h3 {
 }
 
 p {
-	font-size: 12px
+	font-size: 14px
 }
 
 .hidden {
@@ -78,5 +78,9 @@ p {
 	
 	h3 {
 		font-size: 16px
+	}
+
+	p {
+		font-size: 12px;
 	}
 }
