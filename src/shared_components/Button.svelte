@@ -30,7 +30,7 @@
     <svg class='selected' viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="50"></circle>
     </svg>
-    <h2 class='name'>{name + ' >'}</h2>
+    <h2 class='name'>{name}</h2>
     {#if subtext}
       <p class='subtext'>{subtext}</p>
     {/if}
@@ -57,7 +57,6 @@
     background-color: transparent;
     border: none;
     align-self: flex-start;
-    text-decoration: none;
     cursor: pointer;
   }
 
@@ -70,7 +69,7 @@
     padding: 5px;
     margin-right: 5px;
     height: 20px;
-    fill: red;
+    fill: var(--red);
   }
 
   button:focus .selected, a:focus .selected {
@@ -89,6 +88,10 @@
   }
 
   button:focus .subtext, a:focus .subtext {
-    color: red;
+    color: var(--red);
+  }
+  
+  button:focus .name, a:focus .name {
+    color: var(--grey);
   }
 </style>

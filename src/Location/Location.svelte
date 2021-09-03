@@ -49,6 +49,7 @@
   }
   h3 {
     margin-bottom: 20px;
+    color: white;
   }
 
   .links {

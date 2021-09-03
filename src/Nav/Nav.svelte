@@ -48,7 +48,7 @@
     position: relative;
     padding: 6px 20px;
     margin: 10px;
-    background-color: red;
+    background-color: var(--red);
     border-radius: 15px;
   }
 
@@ -73,10 +73,11 @@
   }
 
   .secondary-buttons button:hover h3, .secondary-buttons button:focus h3 {
-    color: red;
+    color: var(--red);
   }
 
-  .stream:focus {
+  .stream:focus, .stream:hover {
+    background-color: var(--light-red);
     outline: none;
   }
 </style>

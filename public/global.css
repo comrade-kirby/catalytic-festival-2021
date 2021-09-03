@@ -3,16 +3,12 @@ html, body {
 	width: 100%;
 	height: 100%;
 
-	--light-grey: #f9f7eb;
-	--olive: #1e1f1d;
-	--light-olive: #2a2b28;
-	--dark-olive: #141514;
-	--dark-grey: #282726;
-	--green: #abfa9b;
-	--dark-green: #65ff46;
-	--transparent-orange: hsla(10, 100%, 72%, 0.486);
-	--orange: hsl(10, 100%, 72%);
-	--dark-orange: hsl(14, 62%, 50%);
+	--light-grey: #d1d1d1;
+	--grey: #6e6e6e;
+	--dark-grey: #252525;
+	--red: #d83114;
+	--light-red: #e0563d;
+	
 	overflow: hidden;
 }
 

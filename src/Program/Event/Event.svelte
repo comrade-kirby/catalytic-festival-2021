@@ -38,7 +38,7 @@
 
 <style>
   .event {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 20px;
   }
 
@@ -53,7 +53,7 @@
 
   @media (max-width: 700px) {
     .event {
-      margin-top: 20px;
+      margin-top: 14px;
       margin-left: 10px;
     }
 
