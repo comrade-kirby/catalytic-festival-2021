@@ -2,7 +2,6 @@
 	import Typewriter from '../typewriter'
   import Button from '../shared_components/Button.svelte'
   import { cities } from '../ascii'
-  import { each } from 'svelte/internal'
   export let cityKey
 
   let cityInfo
@@ -20,26 +19,24 @@
 <div>
   {#if cityInfo}
     <div class='heading'>
-      {#each cityInfo.name as name}
-        <h1 in:Typewriter.type={{speed: 1}}>{name}</h1>
-      {/each}
+      <h1 in:Typewriter.type={{speed: 10}}>{cityInfo.name}</h1>
       <h2 in:Typewriter.type={{speed: 10}}>{cityInfo.country}</h2>
     </div>
     <h3 in:Typewriter.type={{speed: 10}}>{cityInfo.date}</h3>
     <div class='links'>
       <Button 
-        name='[I] In-Person Tickets' 
+        name='in-person tickets' 
         href='https://www.google.com' 
         keyCode='73' 
         external
         autofocus />
       <Button 
-        name='[L] Live Stream Tickets' 
+        name='live stream tickets' 
         href='/rotterndam-haarlem-amsterdam'
         keyCode='76' 
         external />
       <Button 
-        name='[P] Program'
+        name='program'
         href='/{cityKey}/program'
         keyCode='80' />
     </div>

@@ -30,27 +30,25 @@
   bind:this={element} {href} 
   target="_blank"
   on:mouseenter={setFocus} >
-    <h2 class='selected icon'>-></h2>
-    <h2 in:Typewriter.type={{speed: 5}} class='unselected icon'>-</h2>
-    <div class='info'>
-      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name + ' >'}</h2>
-      {#if subtext}
-        <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
-      {/if}
-    </div>
+    <svg class='selected' viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="50"></circle>
+    </svg>
+    <h2 class='name' in:Typewriter.type={{speed: 5}}>{name + ' >'}</h2>
+    {#if subtext}
+      <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
+    {/if}
   </a>
 {:else}
   <button class='focusable' id={keyCode} bind:this={element}
   on:mouseenter={setFocus} 
   on:click={() => page(href)}>
-    <h2 class='selected icon'>-></h2>
-    <h2 in:Typewriter.type={{speed: 5}} class='unselected icon'>-</h2>
-    <div class='info'>
-      <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
-      {#if subtext}
-        <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
-      {/if}
-    </div>
+    <svg class='selected' viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="50"></circle>
+    </svg>
+    <h2 class='name' in:Typewriter.type={{speed: 5}}>{name}</h2>
+    {#if subtext}
+      <p class='subtext' in:Typewriter.type={{speed: 5}}>{subtext}</p>
+    {/if}
   </button>
 {/if}
 
@@ -58,57 +56,42 @@
   button, a {
     display: flex;
     flex-direction: row;
+    align-items: center;
     background-color: transparent;
     border: none;
-    padding: 10px;
     align-self: flex-start;
     text-decoration: none;
     cursor: pointer;
-  }
-
-  .info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   button:focus, a:focus {
     outline: none;
   }
   
-  .icon {
+  .selected {
+    visibility: hidden;
     padding: 5px;
     margin-right: 5px;
-  }
-  
-  .selected {
-    display: none;
+    height: 20px;
+    fill: red;
   }
 
   button:focus .selected, a:focus .selected {
-    display: unset;
-  }
-  button:focus .unselected, a:focus .unselected {
-    display: none;
-  }
-
-  button:focus .name, a:focus .name {
-    background-color: var(--orange);
-    box-shadow: 0 0 4px var(--dark-orange);
-    color: var(--dark-grey);
+    visibility: visible;
   }
 
   .name {
     padding: 5px;
+    font-weight: bold;
+    text-align: left;
   }
 
   .subtext {
-    margin-left: 50px;
+    margin-left: 10px;
+    color: white;
   }
 
-  @media (max-width: 1100px) {
-    button, a {
-      margin-left: -15px
-    }
+  button:focus .subtext, a:focus .subtext {
+    color: red;
   }
 </style>

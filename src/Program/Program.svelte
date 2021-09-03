@@ -20,7 +20,7 @@
 
 <div>
   <input type='button' class='hidden' autofocus >
-  <h1 in:Typewriter.type={{speed: 1}}>{programTitle}</h1>
+  <h1 in:Typewriter.type={{speed: 5}}>Program</h1>
 
   {#if programInfo}
     <div class='location'>

@@ -68,13 +68,13 @@
 
 	.content {
 		z-index: 1;
-		padding: 60px 60px 15px;
+		padding-bottom: 15px;
 		overflow-y: scroll;
 	}
 
 	@media (max-width: 1100px) {
 		.content {
-			padding: 30px 30px 5px;
+			padding-bottom: 5px;
 		}
 	}
 

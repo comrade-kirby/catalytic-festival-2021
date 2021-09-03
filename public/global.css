@@ -16,30 +16,42 @@ html, body {
 	overflow: hidden;
 }
 
+@font-face {
+	font-family: 'AlteHassGrotesk';
+	src: url('/AlteHaasGroteskRegular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'AlteHassGrotesk';
+	src: url('/AlteHaasGroteskBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: 'Syne Mono', monospace;
-	color: var(--orange);
-	text-shadow: 0px 0px 8px var(--dark-orange);
+	font-family: 'AlteHassGrotesk', sans-serif;
+	color: black;
 	font-weight: 500;
 }
 
 h1 {
-	font-size: 14px;
-	font-family: monospace;
-	margin-bottom: 20px;
+	font-size: 54px;
+	font-weight: bold;
+	margin-bottom: 10px;
 	margin-right: 10px;
-	white-space: pre;
 }
 
 h2 {
-	font-size: 20px;
+	font-size: 24px;
 }
 
 h3 {
-	font-size: 16px
+	font-size: 18px
 }
 
 p {
@@ -55,14 +67,12 @@ p {
 
 @media (max-width: 1100px) {
 	h1 {
-		font-size: 12px;
 		margin-bottom: 10px;
 	}
 }
 
 @media (max-width: 500px) {
 	h1 {
-		font-size: 8px;
 		margin-bottom: 10px;
 	}
 
@@ -71,6 +81,6 @@ p {
 	}
 	
 	h3 {
-		font-size: 14px
+		font-size: 16px
 	}
 }
