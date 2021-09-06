@@ -1,16 +1,13 @@
 <script>
   export let href
   export let text
-
-  const setFocus = e => {
-    e.target.focus()
-  }
-
+  export let label = false
 </script>
 
-<p>event: </p>
-<a {href} class='focusable' target='_blank' 
-  on:mouseenter={setFocus}> 
+{#if label}
+  <p>{label + ' : '}</p>
+{/if}
+<a {href} class='focusable' target='_blank'> 
   {text}
 </a>
 
@@ -20,9 +17,8 @@
     display: inline-block;
   }
 
-  a:focus {
-    background-color: var(--orange);
-    box-shadow: 0 0 4px var(--dark-orange);
-    color: var(--dark-grey);
+  a:focus, a:hover {
+    color: var(--red);
+    outline: none;
   }
 </style>

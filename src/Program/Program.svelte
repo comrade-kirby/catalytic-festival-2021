@@ -29,7 +29,7 @@
       {#if programInfo.venue}
         {#if programInfo.venue.link}
           <h3>
-            <Link href={programInfo.venue.link} text={programInfo.venue.name}/>
+            <Link href={programInfo.venue.link} text={programInfo.venue.name} label='venue'/>
           </h3>
         {:else}
           <h3>

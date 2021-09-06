@@ -1,5 +1,6 @@
 <script>
   import Link from '../../shared_components/Link.svelte'
+  import Performance from './Performance/Performance.svelte'
   export let event
 </script>
 
@@ -15,7 +16,7 @@
   {#if event.venue}
     {#if event.venue.link}
       <p>
-        <Link href={event.venue.link} text={event.venue.name} />
+        <Link href={event.venue.link} text={event.venue.name} label='venue' />
       </p>
     {:else}
       <p>
@@ -31,7 +32,7 @@
   <h2 class='lineup-heading'>lineup:</h2>
   <div class='lineup' >
     {#each event.performances as performance}
-      <h3>{'- ' + performance}</h3>
+      <Performance {performance} />
     {/each}
   </div>
 </div>

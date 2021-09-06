@@ -1,6 +1,6 @@
 <script>
   import Button from '../shared_components/Button.svelte'
-  import { cities } from '../ascii'
+  import { cities } from '../locations'
   export let cityKey
 
   let cityInfo
@@ -25,13 +25,13 @@
     <div class='links'>
       <Button 
         name='in-person tickets' 
-        href='https://www.google.com' 
+        href={cityInfo.inPersonTicketLink} 
         keyCode='73' 
         external
         autofocus />
       <Button 
         name='live stream tickets' 
-        href='/rotterndam-haarlem-amsterdam'
+        href={cityInfo.liveStreamTicketLink} 
         keyCode='76' 
         external />
       <Button 

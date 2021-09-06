@@ -19,11 +19,11 @@ const programs = {
         address: 'Boomgaardsstraat 71, Rotterdam, NL',
         audience: 40,
         performances: [
-          'Ig  & Gonzo',
-          'Andy & Yannis',
-          'Terrie &  Kaja  & Ig',
-          'Ab  & Joost',
-          'Jaap & Raoul'
+          { name: 'Ig  & Gonzo' },
+          { name: 'Andy & Yannis' },
+          { name: 'Terrie &  Kaja  & Ig' },
+          { name: 'Ab  & Joost' },
+          { name: 'Jaap & Raoul' }
         ]
       },
       {
@@ -31,9 +31,9 @@ const programs = {
         date: 'Saturday October 9, 2021',
         venue: { name: 'Pletterij' },
         performances: [
-          'Ab & Ig & George & Pau',
-          'Terrie & Andy & Jaap& Genevieve',
-          'Ig & Isabelle  Hanne & Martha'
+          { name: 'Ab & Ig & George & Pau' },
+          { name: 'Terrie & Andy & Jaap& Genevieve' },
+          { name: 'Ig & Isabelle  Hanne & Martha' }
         ]
       },
       {
@@ -41,10 +41,10 @@ const programs = {
         date: 'Sunday October 10, 2021',
         venue: { name: 'Bimhuis' },
         performances: [
-          'Ab & Isabelle & Terrie & Hanne',
-          'Andy en Genevieve',
-          'Ig & Anne',
-          'Jaap & Felicity'
+          { name: 'Ab & Isabelle & Terrie & Hanne' },
+          { name: 'Andy en Genevieve' },
+          { name: 'Ig & Anne' },
+          { name: 'Jaap & Felicity' }
         ]
       },
     ]
@@ -60,25 +60,25 @@ const programs = {
       {
         date: 'Thursday October 14, 2021',
         performances: [
-          'Claire & Macie & Ken',
-          'Bonnie', 
-          'Kuzu'
+          { name: 'Claire & Macie & Ken' },
+          { name: 'Bonnie' }, 
+          { name: 'Kuzu' }
         ]
       },
       {
         date: 'Saturday October 16, 2021',
         performances: [
-          'McPhee & claire',
-          'Damon', 
-          'Marker'
+          { name: 'McPhee & claire' },
+          { name: 'Damon' }, 
+          { name: 'Marker' }
         ]
       },
       {
         date: 'Sunday October 17, 2021',
         performances: [
-          'Feldman & Daisy',  
-          'Tashi', 
-          'McPhee & Corsano & Bonnie & (some other Chicagoan?'
+          { name: 'Feldman & Daisy' }, 
+          { name: 'Tashi' }, 
+          { name: 'McPhee & Corsano & Bonnie & (some other Chicagoan?' }
         ]
       }
     ]
@@ -94,14 +94,14 @@ const programs = {
     events: [
       {
         performances: [
-          'Zeena Parkins',
-          'Brandon Lopez',
-          'Nate Wooley',
-          'Chris Corsano',
-          'Ikue Mori',
-          'Luke Stewart',
-          'Bonnie Jones',
-          '+ Others'
+          { name: 'Zeena Parkins' },
+          { name: 'Brandon Lopez' },
+          { name: 'Nate Wooley' },
+          { name: 'Chris Corsano' },
+          { name: 'Ikue Mori' },
+          { name: 'Luke Stewart' },
+          { name: 'Bonnie Jones' },
+          { name: '+ Others' }
         ]
       },
     ]
@@ -115,23 +115,78 @@ const programs = {
       {
         date: 'Saturday October 10, 2021',
         performances: [
-          'Paal Nilssen-Love & Guro Kvåle',
-          'TEIP TRIO',
-          'TRIO NÅRTH',
-          'Paal Nilssen-Love & Terrie Ex & Signe Emmeluth & Hanne DeBacker',
-          'Juliane Schutz',
-          'DJ LOVE'
+          { 
+            name: 'Paal Nilssen-Love & Guro Kvåle', 
+            info: {
+              bio: 'ad-hoc meeting with Paal and an amazing up-and-coming trombonist studying first semester at the jazz academy in Trondheim'
+            }
+          },
+          { 
+            name: 'TEIP TRIO',
+            info: {
+              bio: 'local improvising trio and working group with bass, guitar and bass clarinet. This performance will be in connection with their debut album-release on Sonic Transmissions Records'
+            }
+          },
+          { 
+            name: 'TRIO NÅRTH',
+            info: {
+              bio: 'Mette Rasmussen/Ingebrigt Håker Flaten/Veslemøy Narvesen (new improvising working band based in Trondheim with Mette, Veslemøy and myself'
+            }
+          },
+          { 
+            name: 'Paal Nilssen-Love & Terrie Ex & Signe Emmeluth & Hanne DeBacker',
+            info: {
+              bio: 'pan-scandinavian/european working band with Paal and Terrie)'
+            }
+          },
+          { 
+            name: 'Juliane Schutz',
+            info: {
+              bio: 'live stream and projections'
+            }
+          },
+          { 
+            name: 'DJ LOVE',
+            info: {
+              bio: 'ALBUMS FROM INGOS RECORD COLLECTION'
+            }
+          }
         ]
       },
       {
         date: 'Saturday October 10, 2021',
         performances: [
-          'Tollef Østvang & Klaus Holm',
-          'Genevieve Murphy & Andy Moor',
-          'Jenny Frøysa & Emil Storløkken Åse/August Glännestrand',
-          'Matilda Rolfsson & Anna Thu Smith & Ingebrigt Håker Flaten & Amalie Dahl',
-          'Juliane Schutz',
-          'REFLECTIONS/PANEL'
+          { 
+            name: 'Tollef Østvang & Klaus Holm',
+            info: {
+              bio: 'local / national ad-hoc drum and reed duo'
+            }
+          },
+          { name: 'Genevieve Murphy & Andy Moor' },
+          { 
+            name: 'Jenny Frøysa & Emil Storløkken Åse/August Glännestrand',
+            info: {
+              bio: 'working band with local improvisers freshly out from the jazz academy'
+            }
+          },
+          { 
+            name: 'Matilda Rolfsson & Anna Thu Smith & Ingebrigt Håker Flaten & Amalie Dahl',
+            info: {
+              bio: 'ad-hoc meeting between drums, bass, saxophone and dance with PHD fellow Matilda Rolfsson and improvisers from the interdisciplinary art scenes in Trondheim'
+            }
+          },
+          { 
+            name: 'Juliane Schutz',
+            info: {
+              bio: 'live stream and projections'
+            }
+          },
+          { 
+            name: 'REFLECTIONS/PANEL',
+            info: {
+              bio: '3 x 30-45 min with three different panels with artists from the lineup'
+            }
+          }
         ]
       }
     ]
@@ -147,9 +202,9 @@ const programs = {
     events: [
       {
         performances: [
-          'Luke Stewart',
-          'Ben Hall',
-          'Joe Morris'
+          { name: 'Luke Stewart' },
+          { name: 'Ben Hall' },
+          { name: 'Joe Morris' }
         ]
       }
     ]

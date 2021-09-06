@@ -23,10 +23,10 @@
       <h3>back</h3>
     </button>
   </div>
-  <button id='83' class='stream' 
-    on:click|preventDefault={() => page('/stream')}>
+  <a id='83' class='stream' 
+    target='_blank' href='https://catalytic-sound.bandcamp.com/music' >
     <h2>stream</h2>
-  </button>
+  </a>
 </div>
 
 <style>
@@ -50,6 +50,7 @@
     margin: 10px;
     background-color: var(--red);
     border-radius: 15px;
+    text-decoration: none;
   }
 
   h2 {
