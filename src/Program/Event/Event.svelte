@@ -5,7 +5,11 @@
 </script>
 
 <div class='event'>
-  {#if event.date}
+  {#if event.link}
+    <h2>
+      <Link href={event.link} text={event.date}/>
+    </h2>
+  {:else}
     <h2>{event.date}</h2>
   {/if}
   {#if event.location}
