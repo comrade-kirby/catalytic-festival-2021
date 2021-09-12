@@ -6,8 +6,8 @@ export const cities = {
     inPersonTicketLink: '#',
     liveStreamTicketLink: '#'
   },
-  'rotterndam-haarlem-amsterdam': {
-    name: 'rotterndam, harlem, amsterdam',
+  'rotterdam-haarlem-amsterdam': {
+    name: 'rotterdam, harlem, amsterdam',
     country: 'Netherlands',
     date: 'October 8-10',
     inPersonTicketLink: '#',

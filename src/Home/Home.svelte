@@ -16,7 +16,7 @@
     <Button
       name='rotterdam, haarlem, amsterdam'
       subtext='Oct 8-10'
-      href='/rotterndam-haarlem-amsterdam'
+      href='/rotterdam-haarlem-amsterdam'
       keyCode='82' />
     <Button
       name='chicago'

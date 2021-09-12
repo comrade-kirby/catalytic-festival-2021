@@ -8,43 +8,117 @@ const programs = {
     date: 'October 1-3',
     events: []
   },
-  'rotterndam-haarlem-amsterdam': {
-    location: 'Rotterndam + Haarlem + Amsterdam, Netherlands',
+  'rotterdam-haarlem-amsterdam': {
+    location: 'Rotterdam + Haarlem + Amsterdam, Netherlands',
     date: 'October 8-10',
     events: [
       {
-        location: 'Rotterndam',
+        location: 'Rotterdam',
         date: 'Friday October 8, 2021',
-        venue: { name: 'Worm' },
-        address: 'Boomgaardsstraat 71, Rotterdam, NL',
+        link: 'https://worm.org/production/catalytic-sound-festival/',
+        venue: {
+          name: 'Worm',
+          link: 'https://worm.org'},
         audience: 40,
         performances: [
-          { name: 'Ig  & Gonzo' },
-          { name: 'Andy & Yannis' },
-          { name: 'Terrie &  Kaja  & Ig' },
-          { name: 'Ab  & Joost' },
-          { name: 'Jaap & Raoul' }
+          {
+            name: 'Ig Henneman, Gonçalo Almeida & Kaja Draksler',
+            info: {
+              bio: 'Ig Henneman, on viola, will play with Gonçalo Almeida on bass and brilliant Slovenian pianist Kaja Draksler. '
+                  }
+          },
+          {
+            name: 'Andy Moor & Yannis Kyriakides',
+            info: {
+              bio: 'Andy Moor (The Ex) and Cypriot Composer Yannis Kyriakides are a long-standing duo working with textured and pulse electronics and abrasive guitar. They will perform pieces from their recent release ‘Pavilion’ on the Unsounds label.'
+            }
+           },
+          {
+            name: 'Terrie Ex & Kaja Draksler with Ab Baars',
+            info: {
+              bio: 'Terrie Ex and Kaja Draksler will play as a duo, an enervating combination of strings and keys galore. Later Ab Baars will join on reeds (tenor sax clarinet, shakuhachi). The trio plans to release a CD in the near future.'
+            }
+           },
+          {
+            name: 'Jaap Blonk & Raoul Van de Weide with Terrie Ex',
+            info: {
+              bio: 'Jaap Blonk and Raoul Van de Weide will begin an improvised set, then joined by Terrie Ex. This promises to be a cacophony of sound, voice, electronics and double bass; with Terrie’s unmistakable guitar sound.'
+            }
+          },
+          {
+            name: 'Hanne De Backer, Paul Lytton & Andy Moor',
+            info: {
+              bio: 'Hanne De Backer is a powerful and vibrant reed player from Antwerp. Hanne will play  baritone sax with the amazing UK drummer Paul Lytton. Guitarist Andy Moor will join them.'
+            }
+          },
+          {
+            name: 'Ab Baars, Joost Buis & Hanne De Backer',
+            info: {
+              bio: 'Ab Baars (tenor sax), Joost Buis (trombone) and Hanne De Backer (baritone sax and bass clarinet) are three incredible horn players. The trio have never played together before. So: the idea was, put them together and see what happens! Expect fireworks.'
+            }
+          }
         ]
       },
       {
         location: 'Haarlem',
         date: 'Saturday October 9, 2021',
-        venue: { name: 'Pletterij' },
+        link: 'https://www.pletterij.nl/event/09-okt-21-catalytic-sound-festival-2021/',
+        venue: {
+          name: 'Pletterij',
+          link: 'https://www.pletterij.nl/'},
         performances: [
-          { name: 'Ab & Ig & George & Pau' },
-          { name: 'Terrie & Andy & Jaap& Genevieve' },
-          { name: 'Ig & Isabelle  Hanne & Martha' }
+          {
+            name: 'Ab Baars, Ig Henneman, George Dumitriu & Pau Sola Masafrets',
+            info: {
+              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Ig Henneman (viola), George Dumitriu (violin/viola) & Pau Sola Masafrets (cello)'
+            }
+          },
+          {
+            name: 'Terrie Ex, Andy Moor, Jaap Blonk & Genevieve Murphy',
+            info: {
+              bio: 'Terrie Ex (guitar), Andy Moor (guitar), Jaap Blonk (voice/electronics) & Genevieve Murphy (electronics/bagpipe)'
+            }
+          },
+          {
+            name: 'Ig Henneman, Isabelle Duthoit, Hanne De Backer & Martha Warelis' ,
+            info: {
+              bio: 'Ig Henneman (viola), Isabelle Duthoit (clarinet/voice), Hanne De Backer (baritonsax) & Martha Warelis (piano)' 
+            }
+          }
         ]
       },
       {
         location: 'Amsterdam',
         date: 'Sunday October 10, 2021',
-        venue: { name: 'Bimhuis' },
+        link: 'https://www.bimhuis.nl/en/calendar/catalytic-festival/',
+        venue: {
+          name: 'BIMHUIS',
+          link: 'https://www.bimhuis.nl/en'},
         performances: [
-          { name: 'Ab & Isabelle & Terrie & Hanne' },
-          { name: 'Andy en Genevieve' },
-          { name: 'Ig & Anne' },
-          { name: 'Jaap & Felicity' }
+          {
+            name: 'Ab Baars, Isabelle Duthoit, Terrie Ex & Hanne De Backer',
+            info: {
+              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Isabelle Duthoit (clarinet/voice), Terrie Ex (guitar) & Hanne De Backer (baritonsax)'
+            }
+          },
+          {
+            name: 'Andy Moor & Genevieve Murphy',
+            info: {
+              bio: 'Andy Moor (guitar) & Genevieve Murphy (electronics/bagpipe)'
+            }
+          },
+          {
+            name: 'Ig Henneman & Anne La Berge',
+            info: {
+              bio: 'Ig Henneman (viola) & Anne La Berge (flutes/electronics)'
+            }
+          },
+          {
+            name: 'Jaap Blonk & Felicity Provan',
+            info: {
+              bio: 'Jaap Blonk (voice/electronics) & Felicity Provan (trumpet/voice)'
+            }
+          }
         ]
       },
     ]
@@ -59,7 +133,7 @@ const programs = {
     events: [
       {
         date: 'Thursday October 14, 2021',
-        link: 'https://elasticarts.org',
+        link: 'https://elasticarts.org/events/catalytic-sound-festival',
         performances: [
           { name: 'claire rousay, Macie Stewart & Ken Vandermark' },
           { name: 'Bonnie Jones' },
@@ -68,6 +142,7 @@ const programs = {
       },
       {
         date: 'Saturday October 16, 2021',
+        link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj-mhsay',
         performances: [
           { name: 'Joe McPhee & claire rousay' },
           { name: 'Damon Locks' },
@@ -76,10 +151,11 @@ const programs = {
       },
       {
         date: 'Sunday October 17, 2021',
+        link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj',
         performances: [
           { name: 'Mark Feldman & Tim Daisy' },
-          { name: 'Tashi Dorji' },
-          { name: 'Joe McPhee, Chris Corsano, Bonnie Jones & Katjinka Klein' }
+          { name: 'Tashi Dorji Solo' },
+          { name: 'Marker' }
         ]
       }
     ]
