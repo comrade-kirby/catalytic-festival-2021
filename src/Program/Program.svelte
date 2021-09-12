@@ -18,23 +18,18 @@
 
 <div>
   <input type='button' class='hidden' autofocus >
-  <h1>Program</h1>
 
   {#if programInfo}
     <div class='location'>
-      <h2>{programInfo.location}</h2>
-      <h3>
-        {programInfo.date}
-      </h3>
       {#if programInfo.venue}
         {#if programInfo.venue.link}
-          <h3>
+          <h2>
             <Link href={programInfo.venue.link} text={programInfo.venue.name}/>
-          </h3>
+          </h2>
         {:else}
-          <h3>
+          <h2>
             {programInfo.venue.name}
-          </h3>
+          </h2>
         {/if}
       {/if}
     </div>
