@@ -2,7 +2,7 @@ export const cities = {
   'vienna': {
     name: 'vienna',
     country: 'Austria',
-    date: 'October 1-3',
+    date: 'October 1, 2',
     inPersonTicketLink: '#',
     liveStreamTicketLink: '#'
   },

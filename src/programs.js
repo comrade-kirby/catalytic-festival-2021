@@ -5,8 +5,63 @@ const programs = {
       name: 'Porgy & Bess',
       link: 'https://www.porgy.at/'
     },
-    date: 'October 1-3',
-    events: []
+    date: 'October 1-2',
+    events: [
+      {
+        date: 'Friday October 1, 2021',
+        link: 'https://www.porgy.at/events/10684/',
+        performances: [
+          {
+            name: 'Lisa Hofmaninger & Judith Schwarz',
+            info: {
+              bio:'Lisa Hofmaninger (bass clarinet/soprano saxophone), Judith Schwarz (drums)'
+            }
+          },
+          {
+            name: 'Daniel Lercher',
+            info: {
+              bio: 'Daniel Lercher (electronics)'
+            }
+          },
+          {
+            name: 'Mats Gustafsson & Didi Kern',
+            info: {
+              bio: 'Mats Gustafsson (reeds), Didi Kern (drums)'
+            }
+          }
+        ]
+      },
+      {
+        date: 'Saturday October 2, 2021',
+        link: 'https://www.porgy.at/events/10685/',
+        performances: [
+          {
+            name: 'Susanna Gartmayer & Christof Kurzmann',
+            info: {
+              bio: 'Susanna Gartmayer (bass clarinet), Christof Kurzmann (ppooll/electronics/reeds/vocals)'
+            }
+          },
+          {
+            name: 'Thomas Berghammer, Jakob Gnigler & Martin Brandlmayr',
+            info: {
+              bio: 'Thomas Berghammer (trumpet), Jakob Gnigler (tenor saxophone), Martin Brandlmayr(drums)'
+            }
+          },
+          {
+            name: 'Elisabeth Harnik, Tanja Feichtmair & Nina Polaschegg',
+            info: {
+              bio: 'Elisabeth Harnik (piano), Tanja Feichtmair (alto saxophone) & Nina Polaschegg (bass)'
+            }
+          },
+          {
+            name: 'DJs Lisi Toobusy & Falling',
+            info: {
+              bio: 'Mats Gustafsson & Christof Kurzmann: turntables'
+            }
+          }
+        ]
+      }
+    ]
   },
   'rotterdam-haarlem-amsterdam': {
     location: 'Rotterdam + Haarlem + Amsterdam, Netherlands',
@@ -70,19 +125,19 @@ const programs = {
           {
             name: 'Ab Baars, Ig Henneman, George Dumitriu & Pau Sola Masafrets',
             info: {
-              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Ig Henneman (viola), George Dumitriu (violin/viola) & Pau Sola Masafrets (cello)'
+              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Ig Henneman (viola), George Dumitriu (violin/viola), Pau Sola Masafrets (cello)'
             }
           },
           {
             name: 'Terrie Ex, Andy Moor, Jaap Blonk & Genevieve Murphy',
             info: {
-              bio: 'Terrie Ex (guitar), Andy Moor (guitar), Jaap Blonk (voice/electronics) & Genevieve Murphy (electronics/bagpipe)'
+              bio: 'Terrie Ex (guitar), Andy Moor (guitar), Jaap Blonk (voice/electronics), Genevieve Murphy (electronics/bagpipe)'
             }
           },
           {
             name: 'Ig Henneman, Isabelle Duthoit, Hanne De Backer & Martha Warelis' ,
             info: {
-              bio: 'Ig Henneman (viola), Isabelle Duthoit (clarinet/voice), Hanne De Backer (baritonsax) & Martha Warelis (piano)' 
+              bio: 'Ig Henneman (viola), Isabelle Duthoit (clarinet/voice), Hanne De Backer (baritonsax), Martha Warelis (piano)'
             }
           }
         ]
@@ -98,25 +153,25 @@ const programs = {
           {
             name: 'Ab Baars, Isabelle Duthoit, Terrie Ex & Hanne De Backer',
             info: {
-              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Isabelle Duthoit (clarinet/voice), Terrie Ex (guitar) & Hanne De Backer (baritonsax)'
+              bio: 'Ab Baars (tenorsax/clarinet/shakuhachi), Isabelle Duthoit (clarinet/voice), Terrie Ex (guitar), Hanne De Backer (baritonsax)'
             }
           },
           {
             name: 'Andy Moor & Genevieve Murphy',
             info: {
-              bio: 'Andy Moor (guitar) & Genevieve Murphy (electronics/bagpipe)'
+              bio: 'Andy Moor (guitar), Genevieve Murphy (electronics/bagpipe)'
             }
           },
           {
             name: 'Ig Henneman & Anne La Berge',
             info: {
-              bio: 'Ig Henneman (viola) & Anne La Berge (flutes/electronics)'
+              bio: 'Ig Henneman (viola), Anne La Berge (flutes/electronics)'
             }
           },
           {
             name: 'Jaap Blonk & Felicity Provan',
             info: {
-              bio: 'Jaap Blonk (voice/electronics) & Felicity Provan (trumpet/voice)'
+              bio: 'Jaap Blonk (voice/electronics), Felicity Provan (trumpet/voice)'
             }
           }
         ]
@@ -135,27 +190,72 @@ const programs = {
         date: 'Thursday October 14, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival',
         performances: [
-          { name: 'claire rousay, Macie Stewart & Ken Vandermark' },
-          { name: 'Bonnie Jones' },
-          { name: 'Kuzu' }
+          {
+            name: 'claire rousay, Macie Stewart & Ken Vandermark',
+            info: {
+              bio: 'claire rousay (percussion), Macie Stewart (violin/voice), Ken Vandermark (reeds)'
+            }
+           },
+          {
+            name: 'Bonnie Jones',
+            info: {
+              bio: 'Bonnie Jones (electronics)'
+            }
+          },
+          {
+            name: 'Kuzu',
+            info: {
+              bio: 'Dave Rempis (saxophones), Tashi Dorji (guitar), Tyler Damon (drums)'
+            }
+          }
         ]
       },
       {
         date: 'Saturday October 16, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj-mhsay',
         performances: [
-          { name: 'Joe McPhee & claire rousay' },
-          { name: 'Damon Locks' },
-          { name: 'Marker' }
+          {
+            name: 'Joe McPhee & claire rousay',
+            info: {
+              bio: 'Joe McPhee (reeds), claire rousay (percussion)'
+            }
+          },
+          {
+            name: 'Damon Locks',
+            info: {
+              bio: 'Damon Locks (dj/samples/misc)'
+            }
+          },
+          {
+            name: 'Joe McPhee, Katjinka Klein, Bonnie Jones & Chris Corsano',
+            info: {
+              bio: 'Joe McPhee (reeds), Katjinka Klein (cello), Bonnie Jones (electronics), Chris Corsano (percussion)'
+            }
+          }
         ]
       },
       {
         date: 'Sunday October 17, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj',
         performances: [
-          { name: 'Mark Feldman & Tim Daisy' },
-          { name: 'Tashi Dorji Solo' },
-          { name: 'Marker' }
+          {
+            name: 'Mark Feldman & Tim Daisy',
+            info: {
+              bio: 'Mark Feldman (violin), Tim Daisy (drums)'
+            }
+          },
+          {
+            name: 'Tashi Dorji',
+            info: {
+              bio: 'Tashi Dorji (guitar)'
+            }
+          },
+          {
+            name: 'Marker',
+            info: {
+              bio: 'Ken Vandermark (reeds), Macie Stewart (violin/keyboards/vocals), Steve Marquette (guitar), Andrew Clinkman (guitar), Phil Sudderberg (drums)'
+            }
+          }
         ]
       }
     ]
@@ -167,53 +267,100 @@ const programs = {
       name: 'Fridman Gallery',
       link: 'https://www.fridmanlive.com'
     },
-    audience: 120,
     events: [
       {
+        date: 'Saturday October 23, 2021',
         performances: [
-          { name: 'Zeena Parkins' },
-          { name: 'Brandon Lopez' },
-          { name: 'Nate Wooley' },
-          { name: 'Chris Corsano' },
-          { name: 'Ikue Mori' },
-          { name: 'Luke Stewart' },
-          { name: 'Bonnie Jones' },
-          { name: '+ Others' }
+          {
+            name: 'Bonnie Jones',
+            info: {
+              bio: 'Bonnie Jones (electronics)'
+            }
+          },
+          {
+            name: 'Cecilia Lopez',
+            info: {
+              bio: 'Cecilia Lopez (electronics)'
+            }
+          },
+          {
+            name: 'Ikue Mori & Zeena Parkins',
+            info: {
+              bio: 'Ikue Mori (computer), Zeena Parkins (harp)'
+            }
+          },
+          {
+            name: 'Joe McPhee',
+            info: {
+              bio: 'Joe McPhee (reeds)'
+            }
+          }
         ]
       },
+      {
+        date: 'Sunday October 24, 2021',
+        performances: [
+          {
+            name: 'Fred Lonberg-Holm, Karen Borca & Michael Wimberly',
+            info: {
+              bio: 'Fred Lonberg-Holm (cello), Karen Borca (bassoon), Michael Wimberly (percussion)'
+            }
+          },
+          {
+            name: 'Nava Dunkelman & gabby fluke-mogul',
+            info: {
+              bio: 'Nava Dunkelman (percussion), gabby fluke-mogul (violin)'
+            }
+          },
+          {
+            name: 'Fred Moten, Gerald Cleaver, Brandon Lopez',
+            info: {
+              bio: 'Fred Moten (voice), Gerald Cleaver (percussion), Brandon Lopez (bass)'
+            }
+          },
+          {
+            name: 'Chris Corsano & Patrick Holms',
+            info: {
+              bio: 'Chris Corsano (percussion), Patrick Holms (clarinet)'
+            }
+          }
+        ]
+      }
     ]
   },
   'trondheim': {
     location: 'Trondheim, Norway',
     date: 'October 30, 31',
-    venue: { name: 'Stillverk1' },
-    audience: 60,
+    venue: {
+      name: 'Stillverk1',
+      link: 'https://www.stillverk1.no'
+     },
     events: [
       {
-        date: 'Saturday October 10, 2021',
+        date: 'Saturday October 30, 2021',
         performances: [
           {
-            name: 'Paal Nilssen-Love & Guro Kvåle',
+            name: 'Signe Emmeluth',
             info: {
-              bio: 'ad-hoc meeting with Paal and an amazing up-and-coming trombonist studying first semester at the jazz academy in Trondheim'
+              bio: ''
             }
           },
           {
-            name: 'TEIP TRIO',
+            name: 'Klaus Holm, Amalie Dahl & Alexander Riris',
             info: {
-              bio: 'local improvising trio and working group with bass, guitar and bass clarinet. This performance will be in connection with their debut album-release on Sonic Transmissions Records'
+              bio: ''
             }
           },
           {
-            name: 'TRIO NÅRTH',
+            name: 'Jenny Frøysa, Emil Storløkken Åse & August Glännestrand',
             info: {
-              bio: 'Mette Rasmussen/Ingebrigt Håker Flaten/Veslemøy Narvesen (new improvising working band based in Trondheim with Mette, Veslemøy and myself'
+              bio: 'working band with local improvisers freshly out from the jazz academy'
             }
           },
           {
-            name: 'Paal Nilssen-Love & Terrie Ex & Signe Emmeluth & Hanne DeBacker',
+            name: 'Signe Emmeluth, Andreas Røysum, Ingebrigt Håker Flaten & Paal Nilssen-Love',
             info: {
-              bio: 'pan-scandinavian/european working band with Paal and Terrie)'
+              bio: ''
             }
           },
           {
@@ -231,25 +378,25 @@ const programs = {
         ]
       },
       {
-        date: 'Saturday October 10, 2021',
+        date: 'Sunday October 31, 2021',
+
         performances: [
           {
-            name: 'Tollef Østvang & Klaus Holm',
+            name: 'Paal Nilssen-Love & Guro Kvåle',
             info: {
-              bio: 'local / national ad-hoc drum and reed duo'
-            }
-          },
-          { name: 'Genevieve Murphy & Andy Moor' },
-          {
-            name: 'Jenny Frøysa & Emil Storløkken Åse/August Glännestrand',
-            info: {
-              bio: 'working band with local improvisers freshly out from the jazz academy'
+              bio: 'ad-hoc meeting with Paal and an amazing up-and-coming trombonist studying first semester at the jazz academy in Trondheim'
             }
           },
           {
-            name: 'Matilda Rolfsson & Anna Thu Smith & Ingebrigt Håker Flaten & Amalie Dahl',
+            name: 'TEIP TRIO',
             info: {
-              bio: 'ad-hoc meeting between drums, bass, saxophone and dance with PHD fellow Matilda Rolfsson and improvisers from the interdisciplinary art scenes in Trondheim'
+              bio: 'local improvising trio and working group with bass, guitar and bass clarinet. This performance will be in connection with their debut album-release on Sonic Transmissions Records'
+            }
+          },
+          {
+            name: 'TRIO NÅRTH',
+            info: {
+              bio: 'Mette Rasmussen/Ingebrigt Håker Flaten/Veslemøy Narvesen'
             }
           },
           {
@@ -264,8 +411,10 @@ const programs = {
               bio: '3 x 30-45 min with three different panels with artists from the lineup'
             }
           }
+
         ]
       }
+
     ]
   },
   'washington-dc': {
@@ -278,10 +427,19 @@ const programs = {
     audience: 150,
     events: [
       {
+        date: 'Saturday October 30, 2021',
         performances: [
-          { name: 'Luke Stewart' },
-          { name: 'Ben Hall' },
-          { name: 'Joe Morris' }
+          {
+            name: 'To be announced...'
+          }
+        ]
+      },
+      {
+        date: 'Sunday October 31, 2021',
+        performances: [
+          {
+            name: 'To be announced...'
+          },
         ]
       }
     ]
