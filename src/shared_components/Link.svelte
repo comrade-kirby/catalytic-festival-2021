@@ -5,9 +5,9 @@
 </script>
 
 {#if label}
-  <p>{label + ' : '}</p>
+  <p>{label + ' '}</p>
 {/if}
-<a {href} class='focusable' target='_blank'> 
+<a {href} class='focusable' target='_blank'>
   {text}
 </a>
 

@@ -39,10 +39,7 @@
       href='/washington-dc'
       keyCode='87' />
   </div>
-  <div class='sponsors'>
-  <h3>presented by:</h3>
 
-  </div>
 </div>
 
 <style>
@@ -69,8 +66,5 @@
     flex-direction: column;
     margin-bottom: 20px;
   }
-  .sponsors {
-  display:flex;
-  flex-direction: row;
-  }
+
 </style>
