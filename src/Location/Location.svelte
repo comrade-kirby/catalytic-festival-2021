@@ -26,7 +26,7 @@
     <h3>{cityInfo.date}</h3>
     <Program {cityKey} />
     <div class='links'>
-      <a href='https://www.patreon.com/catalyticsound?fan_landing=true'>watch all US + Trondheim streams for free with a catalytic sound membership</a>
+      <a href='https://www.patreon.com/catalyticsound?fan_landing=true' target='_blank'>watch all US + Trondheim streams for free with a catalytic sound membership</a>
     </div>
   {/if}
   <!-- {#if cityInfo.presenters}
