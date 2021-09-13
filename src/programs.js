@@ -10,6 +10,8 @@ const programs = {
       {
         date: 'Friday October 1, 2021',
         link: 'https://www.porgy.at/events/10684/',
+        ticketLink: 'https://www.porgy.at/events/order/3727/',
+        livestreamLink: 'https://www.porgy.at/events/payasyouwish/3732/',
         performances: [
           {
             name: 'Lisa Hofmaninger & Judith Schwarz',
@@ -34,6 +36,7 @@ const programs = {
       {
         date: 'Saturday October 2, 2021',
         link: 'https://www.porgy.at/events/10685/',
+        livestreamLink: 'https://www.porgy.at/events/payasyouwish/3731/',
         performances: [
           {
             name: 'Susanna Gartmayer & Christof Kurzmann',
@@ -71,6 +74,7 @@ const programs = {
         location: 'Rotterdam',
         date: 'Friday October 8, 2021',
         link: 'https://worm.org/production/catalytic-sound-festival/',
+        livestreamLink: 'https://worm.stager.nl/web/tickets/111065011',
         venue: {
           name: 'Worm',
           link: 'https://worm.org'},
@@ -118,6 +122,7 @@ const programs = {
         location: 'Haarlem',
         date: 'Saturday October 9, 2021',
         link: 'https://www.pletterij.nl/event/09-okt-21-catalytic-sound-festival-2021/',
+        livestreamLink: 'https://www.pletterij.nl/event/09-okt-21-catalytic-sound-festival-2021/',
         venue: {
           name: 'Pletterij',
           link: 'https://www.pletterij.nl/'},
@@ -146,6 +151,7 @@ const programs = {
         location: 'Amsterdam',
         date: 'Sunday October 10, 2021',
         link: 'https://www.bimhuis.nl/en/calendar/catalytic-festival/',
+        livestreamLink: 'https://www.bimhuis.nl/en/tv-2/',
         venue: {
           name: 'BIMHUIS',
           link: 'https://www.bimhuis.nl/en'},
@@ -189,6 +195,7 @@ const programs = {
       {
         date: 'Thursday October 14, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-1',
         performances: [
           {
             name: 'claire rousay, Macie Stewart & Ken Vandermark',
@@ -213,6 +220,7 @@ const programs = {
       {
         date: 'Saturday October 16, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj-mhsay',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-2',
         performances: [
           {
             name: 'Joe McPhee & claire rousay',
@@ -237,6 +245,7 @@ const programs = {
       {
         date: 'Sunday October 17, 2021',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-3',
         performances: [
           {
             name: 'Mark Feldman & Tim Daisy',
@@ -270,6 +279,7 @@ const programs = {
     events: [
       {
         date: 'Saturday October 23, 2021',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-nyc-day-1',
         performances: [
           {
             name: 'Bonnie Jones',
@@ -298,7 +308,8 @@ const programs = {
         ]
       },
       {
-        date: 'Sunday October 24, 2021',
+        date: 'Sunday : October 24, 2021',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-nyc-day-2',
         performances: [
           {
             name: 'Fred Lonberg-Holm, Karen Borca & Michael Wimberly',
@@ -338,6 +349,7 @@ const programs = {
     events: [
       {
         date: 'Saturday October 30, 2021',
+        link: 'https://www.stillverk1.no/30-31-10-2021-catalytic-festival/',
         performances: [
           {
             name: 'Signe Emmeluth',
@@ -379,7 +391,7 @@ const programs = {
       },
       {
         date: 'Sunday October 31, 2021',
-
+        link: 'https://www.stillverk1.no/30-31-10-2021-catalytic-festival/',
         performances: [
           {
             name: 'Paal Nilssen-Love & Guro Kvåle',
