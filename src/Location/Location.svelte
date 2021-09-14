@@ -33,7 +33,9 @@
     <h3>presented by:</h3>
       <div class='sponsor-logos'>
       {#each cityInfo.presenters as presenter}
-        <img src={presenter.imgPath} width='200px' height="auto">
+        <div class="logo">
+          <img src={presenter.imgPath}>
+        </div>
       {/each}
       </div>
     </div>
@@ -78,9 +80,14 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
   }
-  .sponsor-logos img {
+  .logo {
     margin-top: 5px;
     margin-right: 10px;
+    width: 200px;
+  }
+  .logo img {
+    width: 100%;
   }
 </style>
