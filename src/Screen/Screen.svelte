@@ -15,7 +15,6 @@
 		justify-content: center;
 		flex: 1;
 		padding: 30px 100px;
-		border-radius: 20px;
 		background-color: black;
 	}
 
