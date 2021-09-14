@@ -1,6 +1,4 @@
 <script>
-  import Button from '../shared_components/Button.svelte'
-  import Link from '../shared_components/Link.svelte'
   import { cities } from '../locations'
   import Program from '../Program/Program.svelte'
   export let cityKey
@@ -57,7 +55,6 @@
     margin-top: 20px;
   }
   .links a {
-
     padding: 6px 20px;
     margin: 10px;
     background-color: white;
