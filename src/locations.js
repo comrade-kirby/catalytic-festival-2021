@@ -18,14 +18,23 @@ export const cities = {
     country: 'USA',
     date: 'October 14, 16-17',
     inPersonTicketLink: '#',
-    liveStreamTicketLink: '#'
+    liveStreamTicketLink: '#',
+    presenters: [
+      {imgPath: 'images/blueStem.jpg'},
+      {imgPath: 'images/JFNY.jpg'}
+    ]
   },
   'new-york': {
     name: 'new york',
     country: 'USA',
     date: 'October 23, 24',
     inPersonTicketLink: '#',
-    liveStreamTicketLink: '#'
+    liveStreamTicketLink: '#',
+    presenters: [
+      {imgPath: 'images/rdbf-logo.png'},
+      {imgPath: 'images/JFNY.jpg'},
+      {imgPath: 'images/blueStem.jpg'}
+    ]
   },
   'trondheim': {
     name: 'trondheim',
