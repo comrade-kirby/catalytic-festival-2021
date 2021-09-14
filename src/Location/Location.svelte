@@ -28,13 +28,18 @@
     <div class='links'>
       <a href='https://www.patreon.com/catalyticsound?fan_landing=true' target='_blank'>watch all US + Trondheim streams for free with a catalytic sound membership</a>
     </div>
+    {#if cityInfo.presenters}
+    <div class='sponsors'>
+    <h3>presented by:</h3>
+      <div class='sponsor-logos'>
+      {#each cityInfo.presenters as presenter}
+        <img src={presenter.imgPath} width='200px' height="auto">
+      {/each}
+      </div>
+    </div>
+    {/if}
   {/if}
-  <!-- {#if cityInfo.presenters}
-  <div class='sponsors'>
-  <h3>presented by:</h3>
 
-  </div>
-  {/if} -->
 </div>
 
 <style>
@@ -67,7 +72,15 @@
     }
   }
   .sponsors {
-  display:flex;
-  flex-direction: row;
+  margin-top: 15px;
+  }
+  .sponsor-logos {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .sponsor-logos img {
+    margin-top: 5px;
+    margin-right: 10px;
   }
 </style>
