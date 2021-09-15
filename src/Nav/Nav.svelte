@@ -11,20 +11,20 @@
 
 <div class='nav' bind:clientHeight={h} bind:clientWidth={w}>
   <div class='secondary-buttons'>
-    <button id='72' 
+    <button id='72'
       on:mouseenter={setFocus}
       on:click|preventDefault={() => page('/')}>
         <h3>home</h3>
     </button>
     <h3> | </h3>
-    <button id='66' 
-      on:mouseenter={setFocus} 
+    <button id='66'
+      on:mouseenter={setFocus}
       on:click|preventDefault={() => history.back()}>
       <h3>back</h3>
     </button>
   </div>
-  <a id='83' class='stream' 
-    target='_blank' href='https://catalytic-sound.bandcamp.com/music' >
+  <a id='83' class='stream'
+    target='_blank' href='https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-1' >
     <h2>stream</h2>
   </a>
 </div>

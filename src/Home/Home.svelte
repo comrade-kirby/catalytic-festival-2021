@@ -1,5 +1,6 @@
 <script>
   import Button from '../shared_components/Button.svelte'
+  import { cities } from '../locations.js'
 </script>
 
 <div class='home'>
@@ -9,33 +10,33 @@
   <h2>October 2021</h2>
   <div class='locations'>
     <Button
-      name='vienna'
-      subtext='Oct 1-3'
+      name={cities.vienna.name}
+      subtext={cities.vienna.date}
       href='/vienna'
       keyCode='86' autofocus />
     <Button
-      name='rotterdam, haarlem, amsterdam'
-      subtext='Oct 8-10'
+      name={cities['rotterdam-haarlem-amsterdam']['name']}
+      subtext={cities['rotterdam-haarlem-amsterdam']['date']}
       href='/rotterdam-haarlem-amsterdam'
       keyCode='82' />
     <Button
-      name='chicago'
-      subtext='Oct 14, 15-17'
+      name={cities.chicago.name}
+      subtext={cities.chicago.date}
       href='/chicago'
       keyCode='67' />
     <Button
-      name='new york'
-       subtext='Oct 23, 24'
+      name={cities['new-york']['name']}
+       subtext={cities['new-york']['date']}
        href='/new-york'
        keyCode='78'   />
     <Button
-      name='trondheim'
-      subtext='Oct 30-31'
+      name={cities.trondheim.name}
+      subtext={cities.trondheim.date}
       href='/trondheim'
       keyCode='84' />
     <Button
-      name='washington d.c.'
-      subtext='Oct 30-31'
+      name={cities['washington-dc']['name']}
+      subtext={cities['washington-dc']['date']}
       href='/washington-dc'
       keyCode='87' />
   </div>
