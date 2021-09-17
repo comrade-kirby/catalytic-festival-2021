@@ -239,6 +239,12 @@ const programs = {
             info: {
               bio: 'Joe McPhee (reeds), Katjinka Klein (cello), Bonnie Jones (electronics), Chris Corsano (percussion)'
             }
+          },
+          {
+            name: 'SPECIAL STREAMED ONLINE PERFORMANCE by Akira Sakata and Nana Omori',
+            info: {
+              bio: 'Akira Sakata (saxophone, clarinet, voice), Nana Omori (piano)'
+            }
           }
         ]
       },
@@ -333,6 +339,12 @@ const programs = {
             name: 'Chris Corsano & Patrick Holms',
             info: {
               bio: 'Chris Corsano (percussion), Patrick Holms (clarinet)'
+            }
+          },
+          {
+            name: 'SPECIAL STREAMED ONLINE PERFORMANCE by Akira Sakata and Nana Omori',
+            info: {
+              bio: 'Akira Sakata (saxophone, clarinet, voice), Nana Omori (piano)'
             }
           }
         ]

@@ -4,10 +4,15 @@ export const cities = {
     country: 'Austria',
     date: 'October 1, 2',
     inPersonTicketLink: '#',
-    liveStreamTicketLink: '#'
+    liveStreamTicketLink: '#',
+    presenters: [
+      {imgPath: 'images/akm.jpeg'},
+      {imgPath: 'images/ame.jpg'},
+      {imgPath: 'images/BMKOES.png'}
+    ]
   },
   'rotterdam-haarlem-amsterdam': {
-    name: 'rotterdam, harlem, amsterdam',
+    name: 'rotterdam, haarlem, amsterdam',
     country: 'Netherlands',
     date: 'October 8-10',
     inPersonTicketLink: '#',
@@ -16,7 +21,7 @@ export const cities = {
   'chicago': {
     name: 'chicago',
     country: 'USA',
-    date: 'October 14, 16-17',
+    date: 'October 14, 16, 17',
     inPersonTicketLink: '#',
     liveStreamTicketLink: '#',
     presenters: [
