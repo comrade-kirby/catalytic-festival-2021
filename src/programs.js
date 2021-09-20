@@ -223,9 +223,9 @@ const programs = {
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-2',
         performances: [
           {
-            name: 'Joe McPhee & claire rousay',
+            name: 'Joe McPhee & Olivia Block',
             info: {
-              bio: 'Joe McPhee (reeds), claire rousay (percussion)'
+              bio: 'Joe McPhee (reeds), Olivia Block(electric organ)'
             }
           },
           {
