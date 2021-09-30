@@ -229,9 +229,9 @@ const programs = {
             }
           },
           {
-            name: 'Damon Locks',
+            name: 'Tashi Dorji',
             info: {
-              bio: 'Damon Locks (dj/samples/misc)'
+              bio: 'Tashi Dorji (guitar)'
             }
           },
           {
@@ -260,9 +260,9 @@ const programs = {
             }
           },
           {
-            name: 'Tashi Dorji',
+            name: 'Damon Locks',
             info: {
-              bio: 'Tashi Dorji (guitar)'
+              bio: 'Damon Locks (dj/samples/misc)'
             }
           },
           {
