@@ -8,7 +8,7 @@ const programs = {
     date: 'October 1-2',
     events: [
       {
-        date: 'Friday October 1, 2021',
+        date: 'Friday October 1, 2021 [20:00 CEST]',
         link: 'https://www.porgy.at/events/10684/',
         ticketLink: 'https://www.porgy.at/events/order/3727/',
         livestreamLink: 'https://www.porgy.at/events/payasyouwish/3732/',
@@ -34,7 +34,7 @@ const programs = {
         ]
       },
       {
-        date: 'Saturday October 2, 2021',
+        date: 'Saturday October 2, 2021 [20:00 CEST]',
         link: 'https://www.porgy.at/events/10685/',
         livestreamLink: 'https://www.porgy.at/events/payasyouwish/3731/',
         performances: [
@@ -72,7 +72,7 @@ const programs = {
     events: [
       {
         location: 'Rotterdam',
-        date: 'Friday October 8, 2021',
+        date: 'Friday October 8, 2021 [20:30 CEST]',
         link: 'https://worm.org/production/catalytic-sound-festival/',
         livestreamLink: 'https://worm.stager.nl/web/tickets/111065011',
         venue: {
@@ -120,7 +120,7 @@ const programs = {
       },
       {
         location: 'Haarlem',
-        date: 'Saturday October 9, 2021',
+        date: 'Saturday October 9, 2021 [20:00 CEST]',
         link: 'https://www.pletterij.nl/event/09-okt-21-catalytic-sound-festival-2021/',
         livestreamLink: 'https://www.pletterij.nl/event/09-okt-21-catalytic-sound-festival-2021/',
         venue: {
@@ -149,7 +149,7 @@ const programs = {
       },
       {
         location: 'Amsterdam',
-        date: 'Sunday October 10, 2021',
+        date: 'Sunday October 10, 2021 [20:30 CEST]',
         link: 'https://www.bimhuis.nl/en/calendar/catalytic-festival/',
         livestreamLink: 'https://www.bimhuis.nl/en/tv-2/',
         venue: {
@@ -193,7 +193,7 @@ const programs = {
      },
     events: [
       {
-        date: 'Thursday October 14, 2021',
+        date: 'Thursday October 14, 2021 [8pm CT]',
         link: 'https://elasticarts.org/events/catalytic-sound-festival',
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-1',
         performances: [
@@ -218,7 +218,7 @@ const programs = {
         ]
       },
       {
-        date: 'Saturday October 16, 2021',
+        date: 'Saturday October 16, 2021 [8pm CT]',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj-mhsay',
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-2',
         performances: [
@@ -249,7 +249,7 @@ const programs = {
         ]
       },
       {
-        date: 'Sunday October 17, 2021',
+        date: 'Sunday October 17, 2021 [8pm CT]',
         link: 'https://elasticarts.org/events/catalytic-sound-festival-z52cj',
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-3',
         performances: [
