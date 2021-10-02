@@ -24,7 +24,7 @@
     </button>
   </div>
   <a id='83' class='stream'
-    target='_blank' href='https://www.porgy.at/events/payasyouwish/3732/' >
+    target='_blank' href='https://www.porgy.at/events/live' >
     <h2>stream</h2>
   </a>
 </div>
