@@ -36,7 +36,7 @@ const programs = {
       {
         date: 'Saturday October 2, 2021 [20:00 CEST]',
         link: 'https://www.porgy.at/events/10685/',
-        livestreamLink: 'https://www.porgy.at/events/payasyouwish/3731/',
+        livestreamLink: 'https://www.porgy.at/events/live',
         performances: [
           {
             name: 'Susanna Gartmayer & Christof Kurzmann',
