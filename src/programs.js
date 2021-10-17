@@ -240,12 +240,7 @@ const programs = {
               bio: 'Joe McPhee (reeds), Katjinka Klein (cello), Bonnie Jones (electronics), Chris Corsano (percussion)'
             }
           },
-          {
-            name: 'SPECIAL STREAMED ONLINE PERFORMANCE by Akira Sakata and Nana Omori',
-            info: {
-              bio: 'Akira Sakata (saxophone, clarinet, voice), Nana Omori (piano)'
-            }
-          }
+
         ]
       },
       {
@@ -269,6 +264,12 @@ const programs = {
             name: 'Marker',
             info: {
               bio: 'Ken Vandermark (reeds), Macie Stewart (violin/keyboards/vocals), Steve Marquette (guitar), Andrew Clinkman (guitar), Phil Sudderberg (drums)'
+            }
+          },
+          {
+            name: 'SPECIAL STREAMED ONLINE PERFORMANCE by Akira Sakata and Nana Omori',
+            info: {
+              bio: 'Akira Sakata (saxophone, clarinet, voice), Nana Omori (piano)'
             }
           }
         ]
