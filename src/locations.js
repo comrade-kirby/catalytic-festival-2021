@@ -46,13 +46,20 @@ export const cities = {
     country: 'Norway',
     date: 'October 30, 31',
     inPersonTicketLink: '#',
-    liveStreamTicketLink: '#'
+    liveStreamTicketLink: '#',
+    presenters: [
+      {imgPath: 'images/stn.jpeg'},
+      {imgPath: 'images/stillverk.png'}
+    ]
   },
   'washington-dc': {
     name: 'washington d.c.',
     country: 'USA',
     date: 'October 30, 31',
     inPersonTicketLink: '#',
-    liveStreamTicketLink: '#'
+    liveStreamTicketLink: '#',
+    presenters: [
+      {imgPath: 'images/CAH_Logo.png'}
+    ]
   },
 }
