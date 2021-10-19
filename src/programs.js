@@ -286,6 +286,7 @@ const programs = {
     events: [
       {
         date: 'Saturday October 23, 2021',
+        link: 'https://www.eventbrite.com/e/catalytic-sound-festival-2021-nyc-night-1-tickets-194110769537',
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-nyc-day-1',
         performances: [
           {
@@ -316,6 +317,7 @@ const programs = {
       },
       {
         date: 'Sunday : October 24, 2021',
+        link: 'https://www.eventbrite.com/e/catalytic-sound-festival-2021-nyc-night-2-tickets-194112725387',
         livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-nyc-day-2',
         performances: [
           {
@@ -363,6 +365,7 @@ const programs = {
       {
         date: 'Saturday October 30, 2021',
         link: 'https://www.stillverk1.no/30-31-10-2021-catalytic-festival/',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-trondheim-day-1',
         performances: [
           {
             name: 'Signe Emmeluth',
@@ -405,6 +408,7 @@ const programs = {
       {
         date: 'Sunday October 31, 2021',
         link: 'https://www.stillverk1.no/30-31-10-2021-catalytic-festival/',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-trondheim-day-2',
         performances: [
           {
             name: 'Paal Nilssen-Love & Guro Kvåle',
@@ -453,18 +457,71 @@ const programs = {
     events: [
       {
         date: 'Saturday October 30, 2021',
+        link: 'https://www.rhizomedc.org/new-events/2021/10/30-31/catalytic-sound-festival-2021',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-d-c-day-1',
         performances: [
           {
-            name: 'To be announced...'
+            name: 'Heart of the Ghost + Khalid Thompson',
+            info: {
+              bio: 'Ian McColm (drums), Jarrett Gilgore (reeds), Luke Stewart (upright bass), Khalid Thompson (poetry)'
+            }
+          },
+          {
+            name: 'Hanna Olivegren & Noelle Tolbert',
+            info: {
+              bio: 'Hanna Olivegren (voice), Noelle Tolbert (dance)'
+            }
+          },
+          {
+            name: 'No Land, Alma Laprida & Rex Delafkaran',
+            info: {
+              bio: 'No Land (poetry), Alma Laprida (multi), Rex Delafkaran (dance)'
+            }
+          },
+          {
+            name: 'Jenny Moon Tucker, Leo Svirsky & Thomas Stanley',
+            info: {
+              bio: 'Jenny Moon Tucker (reeds), Leo Svirsky (piano) & Thomas Stanley (electronics)'
+            }
+          },
+          {
+            name: 'Jamal Moore, Orlando Johnson & Peter Redgrave',
+            info: {
+              bio: 'Jamal Moore (reeds), Orlando Johnson (mandolin, cuica, percussion, and flutes) & Peter Redgrave (clarinet, double reeds, brass, and percussion)'
+            }
           }
         ]
       },
       {
         date: 'Sunday October 31, 2021',
+        link: 'https://www.rhizomedc.org/new-events/2021/10/30-31/catalytic-sound-festival-2021',
+        livestreamLink: 'https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-d-c-day-2',
         performances: [
           {
-            name: 'To be announced...'
+            name: 'Ada Pinkston, Nate Scheible & Wendy Eisenberg',
+            info: {
+              bio: 'Ada Pinkston (movement), Nate Scheible (drums) & Wendy Eisenberg (guitar, banjo, voice)'
+            }
           },
+          {
+            name: 'Ben Hall, John Dierker & Nik Francis',
+            info: {
+              bio: 'Ben Hall (percussion), John Dierker (reeds) & Nik Francis (electronics)'
+            }
+          },
+          {
+            name: 'Kirsten Lies-Warfield, Sarah Hughes & Shelly Purdy',
+            info: {
+              bio: 'Kirsten Lies-Warfield (trombone), Sarah Hughes (reeds, flute) & Shelly Purdy (percussion)'
+            }
+          },
+          {
+            name: 'Weed Tree [Amanda Huron / Layne Garrett] + Aquiles Holladay & Basheer Bassene',
+            info: {
+              bio: 'Amanda Huron (drums), Layne Garrett  (guitar), Aquiles Holladay (computer) & Basheer Bassene (dance)'
+            }
+          }
+
         ]
       }
     ]

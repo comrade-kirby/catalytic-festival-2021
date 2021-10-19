@@ -24,7 +24,7 @@
     </button>
   </div>
   <a id='83' class='stream'
-    target='_blank' href='https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-chicago-day-3' >
+    target='_blank' href='https://catalytic-sound.bandcamp.com/merch/catalytic-sound-festival-2021-nyc-day-1' >
     <h2>stream</h2>
   </a>
 </div>
